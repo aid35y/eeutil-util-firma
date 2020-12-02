@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Dec 02 14:56:11 CET 2020
+https\://nexus.carm.es/nexus/content/repositories/thirdparty/.lastUpdated=1606912973636
+https\://nexus.carm.es/nexus/content/groups/public/.error=
+https\://nexus.carm.es/nexus/content/repositories/thirdparty/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1606912973679
+https\://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo/.lastUpdated=1606917371523
+https\://nexus.carm.es/nexus/content/groups/public/.lastUpdated=1606912973598
+https\://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo/.error=
+https\://repo.maven.apache.org/maven2/.error=

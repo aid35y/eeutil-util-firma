@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Nov 30 12:10:08 CET 2020
+https\://nexus.carm.es/nexus/content/groups/public/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1606734608727
+https\://nexus.carm.es/nexus/content/repositories/thirdparty/.lastUpdated=1606734608550
+https\://nexus.carm.es/nexus/content/groups/public/.lastUpdated=1606734608455
+https\://nexus.carm.es/nexus/content/repositories/thirdparty/.error=
+https\://repo.maven.apache.org/maven2/.error=
