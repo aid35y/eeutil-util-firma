@@ -1,0 +1,124 @@
+<!-- Copyright (C) 2012-13 MINHAP, Gobierno de España
+   This program is licensed and may be used, modified and redistributed under the terms
+   of the European Public License (EUPL), either version 1.1 or (at your
+   option) any later version as soon as they are approved by the European Commission.
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+   or implied. See the License for the specific language governing permissions and
+   more details.
+   You should have received a copy of the EUPL1.1 license
+   along with this program; if not, you may find it at
+   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl -->
+
+<beans xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd 
+                        http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+                        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+	<context:annotation-config />
+	<context:component-scan scoped-proxy="targetClass" base-package="es.mpt.dsic.inside" />
+
+	<import resource="./eeutil-comunes-context.xml" />
+	
+	<!-- servicios @firma -->
+	<import resource="classpath:/es/mpt/dsic/inside/context/afirma-service-context.xml"/>
+	
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	
+	<!-- seguridad ws -->
+	<import resource="classpath:es/mpt/dsic/inside/context/eeutil-ws-security-context.xml" />
+	
+	<!-- Intecerceptors logging -->
+	<bean id="abstractLoggingInterceptor" abstract="true">
+	    <property name="prettyLogging" value="true"/>
+	    <property name="limit" value="-1"></property>
+	</bean>
+	<bean id="loggingInInterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor" parent="abstractLoggingInterceptor"/>
+	<bean id="customLoggingInInterceptor" class="es.mpt.dsic.inside.security.interceptor.CustomLogginInInterceptor" parent="loggingInInterceptor"/>
+	<bean id="loggingOutInterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor" parent="abstractLoggingInterceptor"/>
+	<bean id="customLoggingOUTInterceptor" class="es.mpt.dsic.inside.security.interceptor.CustomLogginOUTInterceptor" parent="loggingOutInterceptor"/>
+	
+	
+
+	<jaxws:endpoint id="eeUtilServiceWs" implementor="#eeUtilService"
+		address="/EeUtilService">
+		<jaxws:features>
+			<bean
+				class="es.mpt.dsic.inside.security.implementacion.SpringSecurityContextFeature" />
+		</jaxws:features>
+		<jaxws:properties>
+			<entry key="schema-validation-enabled" value="true" />
+			<entry key="ws-security.callback-handler">
+				<bean
+					class="es.mpt.dsic.inside.security.implementacion.ServerPasswordCallbackHandler">
+					<property name="logExceptions" value="false" />
+					<property name="nestExceptions" value="true" />
+					<property name="authenticationManager" ref="autenticationManager" />
+				</bean>
+			</entry>
+		</jaxws:properties>
+		<jaxws:inInterceptors>
+			<ref bean="customLoggingInInterceptor"/>
+			<bean
+				class="es.mpt.dsic.inside.security.interceptor.SoapAuthenticationObjectInterceptor" >
+				<property name="authenticationManager" ref="autenticationManager" />
+				<property name="authenticationRequired" value="true" />
+			</bean>
+			
+			<bean
+				class="es.mpt.dsic.inside.security.interceptor.SoapAuthenticationInterceptor">
+				<property name="authenticationManager" ref="autenticationManager" />
+				<property name="authenticationRequired" value="false" />
+			</bean>
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref bean="loggingOutInterceptor"/>
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	
+	
+	<!-- USERNAME TOKEN -->
+	<jaxws:endpoint id="eeUtilUtilFirmaUserNameTokenServiceWS" implementor="#eeUtilUtilFirmaUserNameTokenService"
+		address="/EeUtilUtilFirmaUserNameTokenService">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+			<bean
+				class="es.mpt.dsic.inside.security.implementacion.SpringSecurityContextFeature" />
+		</jaxws:features>
+		<jaxws:properties>
+			<entry key="schema-validation-enabled" value="true" />
+			<entry key="ws-security.enable.nonce.cache" value="false" />
+			<entry key="ws-security.enable.timestamp.cache" value="false" />
+			<entry key="ws-security.ut.validator">
+        		<ref bean="customUserTokenValidator"/>
+    		</entry>
+		</jaxws:properties>
+		<jaxws:inInterceptors>
+			<ref bean="customLoggingInInterceptor"/>
+			<ref bean="wSS4JUserTokenInInterceptor"/>
+			<ref bean="userTokenAuthenticationInterceptor"/>
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref bean="loggingOutInterceptor"/>
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	
+	<bean id="consumerEeutilMisc" class="es.mpt.dsic.eeutil.misc.consumer.impl.ConsumerEeutilMiscImpl">
+		<property name="properties">
+			<util:properties location="file:${eeutil-util-firma.config.path}/eeutil.properties"/> 
+		</property>
+		<property name="truststore" value="${org.apache.ws.security.crypto.merlin.truststore.file}"/>
+		<property name="passTruststore" value="${org.apache.ws.security.crypto.merlin.truststore.password}"/>
+	</bean>
+</beans>
