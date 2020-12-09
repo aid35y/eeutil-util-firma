@@ -224,7 +224,7 @@
 		    </activation>
 	        <dependencies>
 	            <dependency>
-					<groupId>oracle</groupId>
+					<groupId>com.oracle</groupId>
 					<artifactId>ojdbc6</artifactId>
 					<version>11.2.0.4.0</version>
 					<type>jar</type>
@@ -241,7 +241,7 @@
 	        <id>debug</id>
 	        <dependencies>
 	            <dependency>
-					<groupId>oracle</groupId>
+					<groupId>com.oracle</groupId>
 					<artifactId>ojdbc6</artifactId>
 					<version>11.2.0.4.0</version>
 				</dependency>
