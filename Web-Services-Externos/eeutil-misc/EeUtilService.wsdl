@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="EeUtilServiceImplService" targetNamespace="http://impl.service.ws.inside.dsic.mpt.es/" xmlns:ns1="http://service.ws.inside.dsic.mpt.es/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.service.ws.inside.dsic.mpt.es/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="https://eeutil-misc.desappjava.seap.minhap.es/eeutil-misc/ws/EeUtilService?wsdl=EeUtilService.wsdl" namespace="http://service.ws.inside.dsic.mpt.es/">
+    </wsdl:import>
+  <wsdl:binding name="EeUtilServiceImplServiceSoapBinding" type="ns1:EeUtilService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="visualizarFacturae">
+      <soap:operation soapAction="urn:visualizarFacturae" style="document"/>
+      <wsdl:input name="visualizarFacturae">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="visualizarFacturaeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InSideException">
+        <soap:fault name="InSideException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="comprobarPDFA">
+      <soap:operation soapAction="urn:comprobarPDFA" style="document"/>
+      <wsdl:input name="comprobarPDFA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="comprobarPDFAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InSideException">
+        <soap:fault name="InSideException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="visualizarFacturaePDF">
+      <soap:operation soapAction="urn:visualizarFacturaePDF" style="document"/>
+      <wsdl:input name="visualizarFacturaePDF">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="visualizarFacturaePDFResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InSideException">
+        <soap:fault name="InSideException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="postProcesarFirma">
+      <soap:operation soapAction="urn:postProcesarFirma" style="document"/>
+      <wsdl:input name="postProcesarFirma">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="postProcesarFirmaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InSideException">
+        <soap:fault name="InSideException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="convertirPDFA">
+      <soap:operation soapAction="urn:convertirPDFA" style="document"/>
+      <wsdl:input name="convertirPDFA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="convertirPDFAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InSideException">
+        <soap:fault name="InSideException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="convertirTCNAPdf">
+      <soap:operation soapAction="urn:convertirTCNAPdf" style="document"/>
+      <wsdl:input name="convertirTCNAPdf">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="convertirTCNAPdfResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InSideException">
+        <soap:fault name="InSideException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EeUtilServiceImplService">
+    <wsdl:port binding="tns:EeUtilServiceImplServiceSoapBinding" name="EeUtilServiceImplPort">
+      <soap:address location="https://eeutil-misc.desappjava.seap.minhap.es/eeutil-misc/ws/EeUtilService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

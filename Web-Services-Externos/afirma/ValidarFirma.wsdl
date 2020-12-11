@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://afirmaws/services/ValidarFirma" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://afirmaws/services/ValidarFirma" xmlns:intf="http://afirmaws/services/ValidarFirma" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsfirma="http://afirmaws/ws/firma" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+
+  <wsdl:types>
+
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://afirmaws/ws/firma" xmlns:wsfirma="http://afirmaws/ws/firma" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+	<!-- Elementos raiz mansajeEntrada y mensajeSalida -->
+
+
+	      <xs:element name="mensajeEntrada">
+
+
+		        <xs:annotation>
+
+
+			          <xs:documentation>
+
+Elemento RAIZ: Mensaje de entrada. Peticion al WS          </xs:documentation>
+
+
+		        </xs:annotation>
+
+
+		        <xs:complexType>
+
+
+			          <xs:sequence>
+
+
+				            <xs:element name="peticion">
+
+
+					              <xs:simpleType>
+
+
+						                <xs:restriction base="wsfirma:CadenaSinEspacios">
+
+
+							                  <xs:enumeration value="ValidarFirma"/>
+
+
+							                  <xs:enumeration value="FirmaServidor"/>
+
+
+							                  <xs:enumeration value="FirmaServidorCoSign"/>
+
+
+							                  <xs:enumeration value="FirmaServidorCounterSign"/>
+
+
+						                </xs:restriction>
+
+
+					              </xs:simpleType>
+
+
+				            </xs:element>
+
+
+				            <xs:element name="versionMsg" type="xs:string"/>
+
+
+				            <xs:element name="parametros" type="wsfirma:parametros"/>
+
+
+			          </xs:sequence>
+
+
+		        </xs:complexType>
+
+
+	      </xs:element>
+
+
+	      <xs:element name="mensajeSalida">
+
+
+		        <xs:annotation>
+
+
+			          <xs:documentation>
+
+Elemento RAIZ: Mensaje de salida. Respuesta del WS a la peticion          </xs:documentation>
+
+
+		        </xs:annotation>
+
+
+		        <xs:complexType>
+
+
+			          <xs:sequence>
+
+
+				            <xs:element name="peticion">
+
+
+					              <xs:simpleType>
+
+
+						                <xs:restriction base="wsfirma:CadenaSinEspacios">
+
+
+							                  <xs:enumeration value="ValidarFirma"/>
+
+
+							                  <xs:enumeration value="FirmaServidor"/>
+
+
+							                  <xs:enumeration value="FirmaServidorCoSign"/>
+
+
+							                  <xs:enumeration value="FirmaServidorCounterSign"/>
+
+
+						                </xs:restriction>
+
+
+					              </xs:simpleType>
+
+
+				            </xs:element>
+
+
+				            <xs:element name="versionMsg" type="xs:string"/>
+
+
+				            <xs:element name="respuesta">
+
+
+					              <xs:complexType>
+
+
+						                <xs:complexContent>
+
+
+							                  <xs:extension base="wsfirma:Respuesta">
+
+
+								                    <xs:choice>
+
+
+									                      <xs:element name="Respuesta" nillable="true">
+
+
+										                        <xs:complexType>
+
+
+											                          <xs:choice>
+
+
+												                            <xs:sequence>
+
+
+													                              <xs:sequence>
+
+
+														                                <xs:element ref="wsfirma:estado"/>
+
+
+														                                <xs:choice>
+
+
+															                                  <xs:element minOccurs="0" ref="wsfirma:descripcion"/>
+
+
+														                                </xs:choice>
+
+
+													                              </xs:sequence>
+
+
+													                              <xs:sequence>
+
+
+														                                <xs:element minOccurs="0" ref="wsfirma:idTransaccion"/>
+
+
+														                                <xs:element minOccurs="0" ref="wsfirma:hash"/>
+
+
+														                                <xs:element minOccurs="0" ref="wsfirma:algoritmoHash"/>
+
+
+														                                <xs:element minOccurs="0" ref="wsfirma:firmaElectronica"/>
+
+
+														                                <xs:element minOccurs="0" ref="wsfirma:formatoFirma"/>
+
+
+														                                <xs:element minOccurs="0" ref="wsfirma:idDocumento"/>
+
+
+													                              </xs:sequence>
+
+
+												                            </xs:sequence>
+
+
+											                          </xs:choice>
+
+
+										                        </xs:complexType>
+
+
+									                      </xs:element>
+
+
+									                      <xs:element name="Excepcion" type="wsfirma:Excepcion"/>
+
+
+								                    </xs:choice>
+
+
+							                  </xs:extension>
+
+
+						                </xs:complexContent>
+
+
+					              </xs:complexType>
+
+
+				            </xs:element>
+
+
+			          </xs:sequence>
+
+
+		        </xs:complexType>
+
+
+	      </xs:element>
+
+
+	<!-- Definicion de elementos usados dentro de los elementos raiz-->
+
+
+	      <xs:simpleType name="CadenaSinEspacios">
+
+
+		        <xs:restriction base="xs:string">
+
+
+			          <xs:whiteSpace value="collapse"/>
+
+
+		        </xs:restriction>
+
+
+	      </xs:simpleType>
+
+
+	      <xs:element name="idAplicacion" type="xs:string"/>
+
+
+	      <xs:element name="firmaElectronica" type="xs:base64Binary"/>
+
+
+	      <xs:element name="certificadoFirmante" type="xs:base64Binary"/>
+
+
+	      <xs:element name="formatoFirma">
+
+
+		        <xs:simpleType>
+
+
+			          <xs:restriction base="xs:string">
+
+
+				            <xs:enumeration value="PKCS7"/>
+
+
+				            <xs:enumeration value="CMS"/>
+
+
+				            <xs:enumeration value="CMS-T"/>
+
+
+				            <xs:enumeration value="CADES"/>
+
+
+				            <xs:enumeration value="CADES-BES"/>
+
+
+				            <xs:enumeration value="CADES-EPES"/>
+
+
+				            <xs:enumeration value="CADES-T"/>
+
+
+				            <xs:enumeration value="CADES-C"/>
+
+
+				            <xs:enumeration value="CADES-X"/>
+
+
+				            <xs:enumeration value="CADES-X1"/>
+
+
+				            <xs:enumeration value="CADES-X2"/>
+
+
+				            <xs:enumeration value="CADES-XL"/>
+
+
+				            <xs:enumeration value="CADES-XL1"/>
+
+
+				            <xs:enumeration value="CADES-XL2"/>
+
+
+				            <xs:enumeration value="CADES-A"/>
+
+
+				            <xs:enumeration value="XMLDSIG"/>
+
+
+				            <xs:enumeration value="XADES"/>
+
+
+				            <xs:enumeration value="XADES-BES"/>
+
+
+				            <xs:enumeration value="XADES-EPES"/>
+
+
+				            <xs:enumeration value="XADES-T"/>
+
+
+				            <xs:enumeration value="XADES-C"/>
+
+
+				            <xs:enumeration value="XADES-X"/>
+
+
+				            <xs:enumeration value="XADES-X1"/>
+
+
+				            <xs:enumeration value="XADES-X2"/>
+
+
+				            <xs:enumeration value="XADES-XL"/>
+
+
+				            <xs:enumeration value="XADES-XL1"/>
+
+
+				            <xs:enumeration value="XADES-XL2"/>
+
+
+				            <xs:enumeration value="XADES-A"/>
+
+
+				            <xs:enumeration value="PDF"/>
+
+
+				            <xs:enumeration value="PADES"/>
+
+
+				            <xs:enumeration value="PADES-BES"/>
+
+
+				            <xs:enumeration value="PADES-EPES"/>
+
+
+				            <xs:enumeration value="PADES-LTV"/>
+
+
+				            <xs:enumeration value="ODF"/>
+
+
+				            <xs:enumeration value="OOXML"/>
+
+
+			          </xs:restriction>
+
+
+		        </xs:simpleType>
+
+
+	      </xs:element>
+
+
+	      <xs:element name="hash" type="xs:base64Binary"/>
+
+
+	      <xs:element name="documento" type="xs:base64Binary"/>
+
+
+	      <xs:element name="datos" type="xs:base64Binary"/>
+
+
+	      <xs:element name="idDocumento" type="xs:string"/>
+
+
+	      <xs:element name="idTransaccion" type="xs:string"/>
+
+
+	      <xs:element name="nombreDocumento" type="xs:string"/>
+
+
+	      <xs:element name="tipoDocumento" type="xs:string"/>
+
+
+	      <xs:element default="false" name="custodiarDocumento" type="xs:boolean"/>
+
+
+	      <xs:element name="firmante" type="xs:string"/>
+
+
+	      <xs:element name="idReferencia" type="xs:string"/>
+
+
+	      <xs:element name="algoritmoHash">
+
+
+		        <xs:simpleType>
+
+
+			          <xs:restriction base="xs:string">
+
+
+				            <xs:enumeration value=""/>
+
+
+				            <xs:enumeration value="MD2"/>
+
+
+				            <xs:enumeration value="MD5"/>
+
+
+				            <xs:enumeration value="SHA"/>
+
+
+				            <xs:enumeration value="SHA1"/>
+
+
+				            <xs:enumeration value="SHA256"/>
+
+
+				            <xs:enumeration value="SHA384"/>
+
+
+				            <xs:enumeration value="SHA512"/>
+
+
+			          </xs:restriction>
+
+
+		        </xs:simpleType>
+
+
+	      </xs:element>
+
+
+	      <xs:element name="firmanteObjetivo" type="xs:base64Binary"/>
+
+
+	      <xs:element name="estado" type="xs:boolean"/>
+
+
+	      <xs:complexType name="parametros">
+
+
+		        <xs:all>
+
+
+			          <xs:element ref="wsfirma:idAplicacion"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:documento"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:idDocumento"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:idTransaccion"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:firmaElectronica"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:certificadoFirmante"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:firmante"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:algoritmoHash"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:idReferencia"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:formatoFirma"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:hash"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:datos"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:firmanteObjetivo"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:nombreDocumento"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:tipoDocumento"/>
+
+
+			          <xs:element minOccurs="0" ref="wsfirma:custodiarDocumento"/>
+
+
+		        </xs:all>
+
+
+	      </xs:complexType>
+
+
+	      <xs:complexType name="Respuesta"/>
+
+
+	      <xs:complexType name="Excepcion">
+
+
+		        <xs:sequence>
+
+
+			          <xs:element name="codigoError" type="xs:string"/>
+
+
+			          <xs:element name="descripcion" type="xs:string"/>
+
+
+			          <xs:element minOccurs="0" name="excepcionAsociada" type="xs:string"/>
+
+
+		        </xs:sequence>
+
+
+	      </xs:complexType>
+
+
+	      <xs:simpleType name="string">
+
+
+		        <xs:restriction base="xs:string"/>
+
+
+	      </xs:simpleType>
+
+
+	      <xs:element name="descripcion">
+
+
+		        <xs:complexType mixed="true">
+
+
+			          <xs:sequence>
+
+
+				            <xs:element minOccurs="0" ref="wsfirma:validacionFirmaElectronica"/>
+
+
+			          </xs:sequence>
+
+
+		        </xs:complexType>
+
+
+	      </xs:element>
+
+
+	      <xs:element name="validacionFirmaElectronica">
+
+
+		        <xs:complexType>
+
+
+			          <xs:sequence>
+
+
+				            <xs:element name="proceso" type="xs:string"/>
+
+
+				            <xs:element name="detalle" type="xs:string"/>
+
+
+				            <xs:element name="conclusion" type="xs:string"/>
+
+
+				            <xs:element minOccurs="0" ref="wsfirma:informacionAdicional"/>
+
+
+			          </xs:sequence>
+
+
+		        </xs:complexType>
+
+
+	      </xs:element>
+
+
+	      <xs:element name="informacionAdicional">
+
+
+		        <xs:complexType>
+
+
+			          <xs:sequence>
+
+
+				            <xs:element maxOccurs="unbounded" name="firmante">
+
+
+					              <xs:complexType>
+
+
+						                <xs:sequence>
+
+
+							                  <xs:element name="certificado" type="xs:base64Binary"/>
+
+
+							                  <xs:element minOccurs="0" name="selloTiempo" type="xs:string"/>
+
+
+							                  <xs:element minOccurs="0" name="certificadoTSA" type="xs:base64Binary"/>
+
+
+						                </xs:sequence>
+
+
+					              </xs:complexType>
+
+
+				            </xs:element>
+
+
+			          </xs:sequence>
+
+
+		        </xs:complexType>
+
+
+	      </xs:element>
+
+
+	      <xs:element name="firmaElectronicaServidor" type="xs:string"/>
+
+
+    </xs:schema>
+
+  </wsdl:types>
+
+
+    <wsdl:message name="ValidarFirmaResponse">
+
+
+        <wsdl:part name="ValidarFirmaReturn" type="xsd:string"/>
+
+
+    </wsdl:message>
+
+
+    <wsdl:message name="ValidarFirmaRequest">
+
+
+        <wsdl:part name="paramIn" type="xsd:string"/>
+
+
+    </wsdl:message>
+
+
+    <wsdl:portType name="FirmaWS">
+
+
+        <wsdl:operation name="ValidarFirma" parameterOrder="paramIn">
+
+
+            <wsdl:input message="impl:ValidarFirmaRequest" name="ValidarFirmaRequest"/>
+
+
+            <wsdl:output message="impl:ValidarFirmaResponse" name="ValidarFirmaResponse"/>
+
+
+        </wsdl:operation>
+
+
+    </wsdl:portType>
+
+
+    <wsdl:binding name="ValidarFirmaSoapBinding" type="impl:FirmaWS">
+
+
+        <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+        <wsdl:operation name="ValidarFirma">
+
+
+            <wsdlsoap:operation soapAction=""/>
+
+
+            <wsdl:input name="ValidarFirmaRequest">
+
+
+                <wsdlsoap:body namespace="http://afirmaws/services/ValidarFirma" use="literal"/>
+
+
+            </wsdl:input>
+
+
+            <wsdl:output name="ValidarFirmaResponse">
+
+
+                <wsdlsoap:body namespace="http://afirmaws/services/ValidarFirma" use="literal"/>
+
+
+            </wsdl:output>
+
+
+        </wsdl:operation>
+
+
+    </wsdl:binding>
+
+
+    <wsdl:service name="FirmaService">
+
+
+        <wsdl:port binding="impl:ValidarFirmaSoapBinding" name="ValidarFirma">
+
+
+            <wsdlsoap:address location="https://des-afirma.redsara.es/afirmaws/services/ValidarFirma"/>
+
+
+        </wsdl:port>
+
+
+    </wsdl:service>
+
+
+</wsdl:definitions>
