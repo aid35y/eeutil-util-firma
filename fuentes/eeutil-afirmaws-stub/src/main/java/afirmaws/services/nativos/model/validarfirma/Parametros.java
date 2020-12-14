@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.nativos.model.validarfirma;
@@ -21,9 +19,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for parametros complex type.
+ * <p>
+ * Java class for parametros complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="parametros">
@@ -60,395 +60,331 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Parametros {
 
-    @XmlElement(required = true)
-    protected String idAplicacion;
-    protected byte[] documento;
-    protected String idDocumento;
-    protected String idTransaccion;
-    protected String firmaElectronica;
-    protected byte[] certificadoFirmante;
-    protected String firmante;
-    protected String algoritmoHash;
-    protected String idReferencia;
-    protected String formatoFirma;
-    protected byte[] hash;
-    protected String datos;
-    protected byte[] firmanteObjetivo;
-    protected String nombreDocumento;
-    protected String tipoDocumento;
-    @XmlElement(defaultValue = "false")
-    protected Boolean custodiarDocumento;
+  @XmlElement(required = true)
+  protected String idAplicacion;
+  protected byte[] documento;
+  protected String idDocumento;
+  protected String idTransaccion;
+  protected String firmaElectronica;
+  protected byte[] certificadoFirmante;
+  protected String firmante;
+  protected String algoritmoHash;
+  protected String idReferencia;
+  protected String formatoFirma;
+  protected byte[] hash;
+  protected String datos;
+  protected byte[] firmanteObjetivo;
+  protected String nombreDocumento;
+  protected String tipoDocumento;
+  @XmlElement(defaultValue = "false")
+  protected Boolean custodiarDocumento;
 
-    /**
-     * Gets the value of the idAplicacion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIdAplicacion() {
-        return idAplicacion;
-    }
+  /**
+   * Gets the value of the idAplicacion property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getIdAplicacion() {
+    return idAplicacion;
+  }
 
-    /**
-     * Sets the value of the idAplicacion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIdAplicacion(String value) {
-        this.idAplicacion = value;
-    }
+  /**
+   * Sets the value of the idAplicacion property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setIdAplicacion(String value) {
+    this.idAplicacion = value;
+  }
 
-    /**
-     * Gets the value of the documento property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getDocumento() {
-        return documento;
-    }
+  /**
+   * Gets the value of the documento property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getDocumento() {
+    return documento;
+  }
 
-    /**
-     * Sets the value of the documento property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setDocumento(byte[] value) {
-        this.documento = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the documento property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setDocumento(byte[] value) {
+    this.documento = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the idDocumento property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIdDocumento() {
-        return idDocumento;
-    }
+  /**
+   * Gets the value of the idDocumento property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getIdDocumento() {
+    return idDocumento;
+  }
 
-    /**
-     * Sets the value of the idDocumento property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIdDocumento(String value) {
-        this.idDocumento = value;
-    }
+  /**
+   * Sets the value of the idDocumento property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setIdDocumento(String value) {
+    this.idDocumento = value;
+  }
 
-    /**
-     * Gets the value of the idTransaccion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIdTransaccion() {
-        return idTransaccion;
-    }
+  /**
+   * Gets the value of the idTransaccion property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getIdTransaccion() {
+    return idTransaccion;
+  }
 
-    /**
-     * Sets the value of the idTransaccion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIdTransaccion(String value) {
-        this.idTransaccion = value;
-    }
+  /**
+   * Sets the value of the idTransaccion property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setIdTransaccion(String value) {
+    this.idTransaccion = value;
+  }
 
-    /**
-     * Gets the value of the firmaElectronica property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public String getFirmaElectronica() {
-        return firmaElectronica;
-    }
+  /**
+   * Gets the value of the firmaElectronica property.
+   * 
+   * @return possible object is byte[]
+   */
+  public String getFirmaElectronica() {
+    return firmaElectronica;
+  }
 
-    /**
-     * Sets the value of the firmaElectronica property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setFirmaElectronica(String value) {
-        this.firmaElectronica = value;
-    }
+  /**
+   * Sets the value of the firmaElectronica property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setFirmaElectronica(String value) {
+    this.firmaElectronica = value;
+  }
 
-    /**
-     * Gets the value of the certificadoFirmante property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getCertificadoFirmante() {
-        return certificadoFirmante;
-    }
+  /**
+   * Gets the value of the certificadoFirmante property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getCertificadoFirmante() {
+    return certificadoFirmante;
+  }
 
-    /**
-     * Sets the value of the certificadoFirmante property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setCertificadoFirmante(byte[] value) {
-        this.certificadoFirmante = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the certificadoFirmante property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setCertificadoFirmante(byte[] value) {
+    this.certificadoFirmante = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the firmante property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFirmante() {
-        return firmante;
-    }
+  /**
+   * Gets the value of the firmante property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getFirmante() {
+    return firmante;
+  }
 
-    /**
-     * Sets the value of the firmante property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFirmante(String value) {
-        this.firmante = value;
-    }
+  /**
+   * Sets the value of the firmante property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setFirmante(String value) {
+    this.firmante = value;
+  }
 
-    /**
-     * Gets the value of the algoritmoHash property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAlgoritmoHash() {
-        return algoritmoHash;
-    }
+  /**
+   * Gets the value of the algoritmoHash property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getAlgoritmoHash() {
+    return algoritmoHash;
+  }
 
-    /**
-     * Sets the value of the algoritmoHash property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAlgoritmoHash(String value) {
-        this.algoritmoHash = value;
-    }
+  /**
+   * Sets the value of the algoritmoHash property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setAlgoritmoHash(String value) {
+    this.algoritmoHash = value;
+  }
 
-    /**
-     * Gets the value of the idReferencia property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIdReferencia() {
-        return idReferencia;
-    }
+  /**
+   * Gets the value of the idReferencia property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getIdReferencia() {
+    return idReferencia;
+  }
 
-    /**
-     * Sets the value of the idReferencia property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIdReferencia(String value) {
-        this.idReferencia = value;
-    }
+  /**
+   * Sets the value of the idReferencia property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setIdReferencia(String value) {
+    this.idReferencia = value;
+  }
 
-    /**
-     * Gets the value of the formatoFirma property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFormatoFirma() {
-        return formatoFirma;
-    }
+  /**
+   * Gets the value of the formatoFirma property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getFormatoFirma() {
+    return formatoFirma;
+  }
 
-    /**
-     * Sets the value of the formatoFirma property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFormatoFirma(String value) {
-        this.formatoFirma = value;
-    }
+  /**
+   * Sets the value of the formatoFirma property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setFormatoFirma(String value) {
+    this.formatoFirma = value;
+  }
 
-    /**
-     * Gets the value of the hash property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getHash() {
-        return hash;
-    }
+  /**
+   * Gets the value of the hash property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getHash() {
+    return hash;
+  }
 
-    /**
-     * Sets the value of the hash property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setHash(byte[] value) {
-        this.hash = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the hash property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setHash(byte[] value) {
+    this.hash = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the datos property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public String getDatos() {
-        return datos;
-    }
+  /**
+   * Gets the value of the datos property.
+   * 
+   * @return possible object is byte[]
+   */
+  public String getDatos() {
+    return datos;
+  }
 
-    /**
-     * Sets the value of the datos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setDatos(String value) {
-        this.datos = value;
-    }
+  /**
+   * Sets the value of the datos property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setDatos(String value) {
+    this.datos = value;
+  }
 
-    /**
-     * Gets the value of the firmanteObjetivo property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getFirmanteObjetivo() {
-        return firmanteObjetivo;
-    }
+  /**
+   * Gets the value of the firmanteObjetivo property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getFirmanteObjetivo() {
+    return firmanteObjetivo;
+  }
 
-    /**
-     * Sets the value of the firmanteObjetivo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setFirmanteObjetivo(byte[] value) {
-        this.firmanteObjetivo = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the firmanteObjetivo property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setFirmanteObjetivo(byte[] value) {
+    this.firmanteObjetivo = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the nombreDocumento property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNombreDocumento() {
-        return nombreDocumento;
-    }
+  /**
+   * Gets the value of the nombreDocumento property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getNombreDocumento() {
+    return nombreDocumento;
+  }
 
-    /**
-     * Sets the value of the nombreDocumento property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNombreDocumento(String value) {
-        this.nombreDocumento = value;
-    }
+  /**
+   * Sets the value of the nombreDocumento property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setNombreDocumento(String value) {
+    this.nombreDocumento = value;
+  }
 
-    /**
-     * Gets the value of the tipoDocumento property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getTipoDocumento() {
-        return tipoDocumento;
-    }
+  /**
+   * Gets the value of the tipoDocumento property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getTipoDocumento() {
+    return tipoDocumento;
+  }
 
-    /**
-     * Sets the value of the tipoDocumento property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTipoDocumento(String value) {
-        this.tipoDocumento = value;
-    }
+  /**
+   * Sets the value of the tipoDocumento property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setTipoDocumento(String value) {
+    this.tipoDocumento = value;
+  }
 
-    /**
-     * Gets the value of the custodiarDocumento property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isCustodiarDocumento() {
-        return custodiarDocumento;
-    }
+  /**
+   * Gets the value of the custodiarDocumento property.
+   * 
+   * @return possible object is {@link Boolean }
+   * 
+   */
+  public Boolean isCustodiarDocumento() {
+    return custodiarDocumento;
+  }
 
-    /**
-     * Sets the value of the custodiarDocumento property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setCustodiarDocumento(Boolean value) {
-        this.custodiarDocumento = value;
-    }
+  /**
+   * Sets the value of the custodiarDocumento property.
+   * 
+   * @param value allowed object is {@link Boolean }
+   * 
+   */
+  public void setCustodiarDocumento(Boolean value) {
+    this.custodiarDocumento = value;
+  }
 
 }

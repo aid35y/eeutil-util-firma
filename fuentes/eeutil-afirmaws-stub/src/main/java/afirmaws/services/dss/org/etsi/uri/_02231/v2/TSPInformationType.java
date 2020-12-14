@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.org.etsi.uri._02231.v2;
@@ -21,9 +19,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for TSPInformationType complex type.
+ * <p>
+ * Java class for TSPInformationType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TSPInformationType">
@@ -44,144 +44,119 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TSPInformationType", propOrder = {
-    "tspName",
-    "tspTradeName",
-    "tspAddress",
-    "tspInformationURI",
-    "tspInformationExtensions"
-})
+@XmlType(name = "TSPInformationType", propOrder = {"tspName", "tspTradeName", "tspAddress",
+    "tspInformationURI", "tspInformationExtensions"})
 public class TSPInformationType {
 
-    @XmlElement(name = "TSPName", required = true)
-    protected InternationalNamesType tspName;
-    @XmlElement(name = "TSPTradeName")
-    protected InternationalNamesType tspTradeName;
-    @XmlElement(name = "TSPAddress", required = true)
-    protected AddressType tspAddress;
-    @XmlElement(name = "TSPInformationURI", required = true)
-    protected NonEmptyMultiLangURIListType tspInformationURI;
-    @XmlElement(name = "TSPInformationExtensions")
-    protected ExtensionsListType tspInformationExtensions;
+  @XmlElement(name = "TSPName", required = true)
+  protected InternationalNamesType tspName;
+  @XmlElement(name = "TSPTradeName")
+  protected InternationalNamesType tspTradeName;
+  @XmlElement(name = "TSPAddress", required = true)
+  protected AddressType tspAddress;
+  @XmlElement(name = "TSPInformationURI", required = true)
+  protected NonEmptyMultiLangURIListType tspInformationURI;
+  @XmlElement(name = "TSPInformationExtensions")
+  protected ExtensionsListType tspInformationExtensions;
 
-    /**
-     * Gets the value of the tspName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesType }
-     *     
-     */
-    public InternationalNamesType getTSPName() {
-        return tspName;
-    }
+  /**
+   * Gets the value of the tspName property.
+   * 
+   * @return possible object is {@link InternationalNamesType }
+   * 
+   */
+  public InternationalNamesType getTSPName() {
+    return tspName;
+  }
 
-    /**
-     * Sets the value of the tspName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InternationalNamesType }
-     *     
-     */
-    public void setTSPName(InternationalNamesType value) {
-        this.tspName = value;
-    }
+  /**
+   * Sets the value of the tspName property.
+   * 
+   * @param value allowed object is {@link InternationalNamesType }
+   * 
+   */
+  public void setTSPName(InternationalNamesType value) {
+    this.tspName = value;
+  }
 
-    /**
-     * Gets the value of the tspTradeName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesType }
-     *     
-     */
-    public InternationalNamesType getTSPTradeName() {
-        return tspTradeName;
-    }
+  /**
+   * Gets the value of the tspTradeName property.
+   * 
+   * @return possible object is {@link InternationalNamesType }
+   * 
+   */
+  public InternationalNamesType getTSPTradeName() {
+    return tspTradeName;
+  }
 
-    /**
-     * Sets the value of the tspTradeName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InternationalNamesType }
-     *     
-     */
-    public void setTSPTradeName(InternationalNamesType value) {
-        this.tspTradeName = value;
-    }
+  /**
+   * Sets the value of the tspTradeName property.
+   * 
+   * @param value allowed object is {@link InternationalNamesType }
+   * 
+   */
+  public void setTSPTradeName(InternationalNamesType value) {
+    this.tspTradeName = value;
+  }
 
-    /**
-     * Gets the value of the tspAddress property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AddressType }
-     *     
-     */
-    public AddressType getTSPAddress() {
-        return tspAddress;
-    }
+  /**
+   * Gets the value of the tspAddress property.
+   * 
+   * @return possible object is {@link AddressType }
+   * 
+   */
+  public AddressType getTSPAddress() {
+    return tspAddress;
+  }
 
-    /**
-     * Sets the value of the tspAddress property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AddressType }
-     *     
-     */
-    public void setTSPAddress(AddressType value) {
-        this.tspAddress = value;
-    }
+  /**
+   * Sets the value of the tspAddress property.
+   * 
+   * @param value allowed object is {@link AddressType }
+   * 
+   */
+  public void setTSPAddress(AddressType value) {
+    this.tspAddress = value;
+  }
 
-    /**
-     * Gets the value of the tspInformationURI property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NonEmptyMultiLangURIListType }
-     *     
-     */
-    public NonEmptyMultiLangURIListType getTSPInformationURI() {
-        return tspInformationURI;
-    }
+  /**
+   * Gets the value of the tspInformationURI property.
+   * 
+   * @return possible object is {@link NonEmptyMultiLangURIListType }
+   * 
+   */
+  public NonEmptyMultiLangURIListType getTSPInformationURI() {
+    return tspInformationURI;
+  }
 
-    /**
-     * Sets the value of the tspInformationURI property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NonEmptyMultiLangURIListType }
-     *     
-     */
-    public void setTSPInformationURI(NonEmptyMultiLangURIListType value) {
-        this.tspInformationURI = value;
-    }
+  /**
+   * Sets the value of the tspInformationURI property.
+   * 
+   * @param value allowed object is {@link NonEmptyMultiLangURIListType }
+   * 
+   */
+  public void setTSPInformationURI(NonEmptyMultiLangURIListType value) {
+    this.tspInformationURI = value;
+  }
 
-    /**
-     * Gets the value of the tspInformationExtensions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExtensionsListType }
-     *     
-     */
-    public ExtensionsListType getTSPInformationExtensions() {
-        return tspInformationExtensions;
-    }
+  /**
+   * Gets the value of the tspInformationExtensions property.
+   * 
+   * @return possible object is {@link ExtensionsListType }
+   * 
+   */
+  public ExtensionsListType getTSPInformationExtensions() {
+    return tspInformationExtensions;
+  }
 
-    /**
-     * Sets the value of the tspInformationExtensions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExtensionsListType }
-     *     
-     */
-    public void setTSPInformationExtensions(ExtensionsListType value) {
-        this.tspInformationExtensions = value;
-    }
+  /**
+   * Sets the value of the tspInformationExtensions property.
+   * 
+   * @param value allowed object is {@link ExtensionsListType }
+   * 
+   */
+  public void setTSPInformationExtensions(ExtensionsListType value) {
+    this.tspInformationExtensions = value;
+  }
 
 }

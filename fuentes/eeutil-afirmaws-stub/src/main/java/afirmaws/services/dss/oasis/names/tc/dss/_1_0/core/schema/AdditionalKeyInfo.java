@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.oasis.names.tc.dss._1_0.core.schema;
@@ -23,9 +21,11 @@ import afirmaws.services.dss.org.w3._2000._09.xmldsig.KeyInfoType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -42,37 +42,31 @@ import afirmaws.services.dss.org.w3._2000._09.xmldsig.KeyInfoType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "keyInfo"
-})
+@XmlType(name = "", propOrder = {"keyInfo"})
 @XmlRootElement(name = "AdditionalKeyInfo")
 public class AdditionalKeyInfo {
 
-    @XmlElement(name = "KeyInfo", namespace = "http://www.w3.org/2000/09/xmldsig#", required = true)
-    protected KeyInfoType keyInfo;
+  @XmlElement(name = "KeyInfo", namespace = "http://www.w3.org/2000/09/xmldsig#", required = true)
+  protected KeyInfoType keyInfo;
 
-    /**
-     * Gets the value of the keyInfo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link KeyInfoType }
-     *     
-     */
-    public KeyInfoType getKeyInfo() {
-        return keyInfo;
-    }
+  /**
+   * Gets the value of the keyInfo property.
+   * 
+   * @return possible object is {@link KeyInfoType }
+   * 
+   */
+  public KeyInfoType getKeyInfo() {
+    return keyInfo;
+  }
 
-    /**
-     * Sets the value of the keyInfo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link KeyInfoType }
-     *     
-     */
-    public void setKeyInfo(KeyInfoType value) {
-        this.keyInfo = value;
-    }
+  /**
+   * Sets the value of the keyInfo property.
+   * 
+   * @param value allowed object is {@link KeyInfoType }
+   * 
+   */
+  public void setKeyInfo(KeyInfoType value) {
+    this.keyInfo = value;
+  }
 
 }

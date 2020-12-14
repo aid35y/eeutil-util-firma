@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.org.w3._2000._09.xmldsig;
@@ -21,9 +19,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for DSAKeyValueType complex type.
+ * <p>
+ * Java class for DSAKeyValueType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="DSAKeyValueType">
@@ -50,184 +50,148 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DSAKeyValueType", propOrder = {
-    "p",
-    "q",
-    "g",
-    "y",
-    "j",
-    "seed",
-    "pgenCounter"
-})
+@XmlType(name = "DSAKeyValueType", propOrder = {"p", "q", "g", "y", "j", "seed", "pgenCounter"})
 public class DSAKeyValueType {
 
-    @XmlElement(name = "P")
-    protected byte[] p;
-    @XmlElement(name = "Q")
-    protected byte[] q;
-    @XmlElement(name = "G")
-    protected byte[] g;
-    @XmlElement(name = "Y", required = true)
-    protected byte[] y;
-    @XmlElement(name = "J")
-    protected byte[] j;
-    @XmlElement(name = "Seed")
-    protected byte[] seed;
-    @XmlElement(name = "PgenCounter")
-    protected byte[] pgenCounter;
+  @XmlElement(name = "P")
+  protected byte[] p;
+  @XmlElement(name = "Q")
+  protected byte[] q;
+  @XmlElement(name = "G")
+  protected byte[] g;
+  @XmlElement(name = "Y", required = true)
+  protected byte[] y;
+  @XmlElement(name = "J")
+  protected byte[] j;
+  @XmlElement(name = "Seed")
+  protected byte[] seed;
+  @XmlElement(name = "PgenCounter")
+  protected byte[] pgenCounter;
 
-    /**
-     * Gets the value of the p property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getP() {
-        return p;
-    }
+  /**
+   * Gets the value of the p property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getP() {
+    return p;
+  }
 
-    /**
-     * Sets the value of the p property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setP(byte[] value) {
-        this.p = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the p property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setP(byte[] value) {
+    this.p = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the q property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getQ() {
-        return q;
-    }
+  /**
+   * Gets the value of the q property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getQ() {
+    return q;
+  }
 
-    /**
-     * Sets the value of the q property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setQ(byte[] value) {
-        this.q = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the q property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setQ(byte[] value) {
+    this.q = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the g property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getG() {
-        return g;
-    }
+  /**
+   * Gets the value of the g property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getG() {
+    return g;
+  }
 
-    /**
-     * Sets the value of the g property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setG(byte[] value) {
-        this.g = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the g property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setG(byte[] value) {
+    this.g = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the y property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getY() {
-        return y;
-    }
+  /**
+   * Gets the value of the y property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getY() {
+    return y;
+  }
 
-    /**
-     * Sets the value of the y property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setY(byte[] value) {
-        this.y = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the y property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setY(byte[] value) {
+    this.y = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the j property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getJ() {
-        return j;
-    }
+  /**
+   * Gets the value of the j property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getJ() {
+    return j;
+  }
 
-    /**
-     * Sets the value of the j property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setJ(byte[] value) {
-        this.j = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the j property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setJ(byte[] value) {
+    this.j = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the seed property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getSeed() {
-        return seed;
-    }
+  /**
+   * Gets the value of the seed property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getSeed() {
+    return seed;
+  }
 
-    /**
-     * Sets the value of the seed property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setSeed(byte[] value) {
-        this.seed = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the seed property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setSeed(byte[] value) {
+    this.seed = ((byte[]) value);
+  }
 
-    /**
-     * Gets the value of the pgenCounter property.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
-     */
-    public byte[] getPgenCounter() {
-        return pgenCounter;
-    }
+  /**
+   * Gets the value of the pgenCounter property.
+   * 
+   * @return possible object is byte[]
+   */
+  public byte[] getPgenCounter() {
+    return pgenCounter;
+  }
 
-    /**
-     * Sets the value of the pgenCounter property.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
-     */
-    public void setPgenCounter(byte[] value) {
-        this.pgenCounter = ((byte[]) value);
-    }
+  /**
+   * Sets the value of the pgenCounter property.
+   * 
+   * @param value allowed object is byte[]
+   */
+  public void setPgenCounter(byte[] value) {
+    this.pgenCounter = ((byte[]) value);
+  }
 
 }

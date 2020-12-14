@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.nativos.model.validarfirma;
@@ -22,9 +20,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -44,117 +44,96 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "proceso",
-    "detalle",
-    "conclusion",
-    "informacionAdicional"
-})
+@XmlType(name = "", propOrder = {"proceso", "detalle", "conclusion", "informacionAdicional"})
 @XmlRootElement(name = "validacionFirmaElectronica")
 public class ValidacionFirmaElectronica {
 
-    @XmlElement(required = true)
-    protected String proceso;
-    @XmlElement(required = true)
-    protected String detalle;
-    @XmlElement(required = true)
-    protected String conclusion;
-    protected InformacionAdicional informacionAdicional;
+  @XmlElement(required = true)
+  protected String proceso;
+  @XmlElement(required = true)
+  protected String detalle;
+  @XmlElement(required = true)
+  protected String conclusion;
+  protected InformacionAdicional informacionAdicional;
 
-    /**
-     * Gets the value of the proceso property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getProceso() {
-        return proceso;
-    }
+  /**
+   * Gets the value of the proceso property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getProceso() {
+    return proceso;
+  }
 
-    /**
-     * Sets the value of the proceso property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setProceso(String value) {
-        this.proceso = value;
-    }
+  /**
+   * Sets the value of the proceso property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setProceso(String value) {
+    this.proceso = value;
+  }
 
-    /**
-     * Gets the value of the detalle property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDetalle() {
-        return detalle;
-    }
+  /**
+   * Gets the value of the detalle property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getDetalle() {
+    return detalle;
+  }
 
-    /**
-     * Sets the value of the detalle property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDetalle(String value) {
-        this.detalle = value;
-    }
+  /**
+   * Sets the value of the detalle property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setDetalle(String value) {
+    this.detalle = value;
+  }
 
-    /**
-     * Gets the value of the conclusion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getConclusion() {
-        return conclusion;
-    }
+  /**
+   * Gets the value of the conclusion property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getConclusion() {
+    return conclusion;
+  }
 
-    /**
-     * Sets the value of the conclusion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setConclusion(String value) {
-        this.conclusion = value;
-    }
+  /**
+   * Sets the value of the conclusion property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setConclusion(String value) {
+    this.conclusion = value;
+  }
 
-    /**
-     * Gets the value of the informacionAdicional property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InformacionAdicional }
-     *     
-     */
-    public InformacionAdicional getInformacionAdicional() {
-        return informacionAdicional;
-    }
+  /**
+   * Gets the value of the informacionAdicional property.
+   * 
+   * @return possible object is {@link InformacionAdicional }
+   * 
+   */
+  public InformacionAdicional getInformacionAdicional() {
+    return informacionAdicional;
+  }
 
-    /**
-     * Sets the value of the informacionAdicional property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InformacionAdicional }
-     *     
-     */
-    public void setInformacionAdicional(InformacionAdicional value) {
-        this.informacionAdicional = value;
-    }
+  /**
+   * Sets the value of the informacionAdicional property.
+   * 
+   * @param value allowed object is {@link InformacionAdicional }
+   * 
+   */
+  public void setInformacionAdicional(InformacionAdicional value) {
+    this.informacionAdicional = value;
+  }
 
 }

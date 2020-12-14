@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.oasis.names.tc.dss._1_0.profiles.verificationreport.schema;
@@ -28,9 +26,11 @@ import afirmaws.services.dss.org.etsi.uri._02231.v2.TrustServiceProviderListType
 
 
 /**
- * <p>Java class for TrustStatusListValidityType complex type.
+ * <p>
+ * Java class for TrustStatusListValidityType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TrustStatusListValidityType">
@@ -51,145 +51,123 @@ import afirmaws.services.dss.org.etsi.uri._02231.v2.TrustServiceProviderListType
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrustStatusListValidityType", propOrder = {
-    "schemeInformation",
-    "trustServiceProviderList",
-    "signatureOK"
-})
+@XmlType(name = "TrustStatusListValidityType",
+    propOrder = {"schemeInformation", "trustServiceProviderList", "signatureOK"})
 public class TrustStatusListValidityType {
 
-    @XmlElement(name = "SchemeInformation", namespace = "http://uri.etsi.org/02231/v2#", required = true)
-    protected TSLSchemeInformationType schemeInformation;
-    @XmlElement(name = "TrustServiceProviderList", namespace = "http://uri.etsi.org/02231/v2#")
-    protected TrustServiceProviderListType trustServiceProviderList;
-    @XmlElement(name = "SignatureOK", required = true)
-    protected SignatureValidityType signatureOK;
-    @XmlAttribute(name = "Id")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAttribute(name = "TSLTag", required = true)
-    protected String tslTag;
+  @XmlElement(name = "SchemeInformation", namespace = "http://uri.etsi.org/02231/v2#",
+      required = true)
+  protected TSLSchemeInformationType schemeInformation;
+  @XmlElement(name = "TrustServiceProviderList", namespace = "http://uri.etsi.org/02231/v2#")
+  protected TrustServiceProviderListType trustServiceProviderList;
+  @XmlElement(name = "SignatureOK", required = true)
+  protected SignatureValidityType signatureOK;
+  @XmlAttribute(name = "Id")
+  @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+  @XmlID
+  @XmlSchemaType(name = "ID")
+  protected String id;
+  @XmlAttribute(name = "TSLTag", required = true)
+  protected String tslTag;
 
-    /**
-     * Gets the value of the schemeInformation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TSLSchemeInformationType }
-     *     
-     */
-    public TSLSchemeInformationType getSchemeInformation() {
-        return schemeInformation;
-    }
+  /**
+   * Gets the value of the schemeInformation property.
+   * 
+   * @return possible object is {@link TSLSchemeInformationType }
+   * 
+   */
+  public TSLSchemeInformationType getSchemeInformation() {
+    return schemeInformation;
+  }
 
-    /**
-     * Sets the value of the schemeInformation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TSLSchemeInformationType }
-     *     
-     */
-    public void setSchemeInformation(TSLSchemeInformationType value) {
-        this.schemeInformation = value;
-    }
+  /**
+   * Sets the value of the schemeInformation property.
+   * 
+   * @param value allowed object is {@link TSLSchemeInformationType }
+   * 
+   */
+  public void setSchemeInformation(TSLSchemeInformationType value) {
+    this.schemeInformation = value;
+  }
 
-    /**
-     * Gets the value of the trustServiceProviderList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TrustServiceProviderListType }
-     *     
-     */
-    public TrustServiceProviderListType getTrustServiceProviderList() {
-        return trustServiceProviderList;
-    }
+  /**
+   * Gets the value of the trustServiceProviderList property.
+   * 
+   * @return possible object is {@link TrustServiceProviderListType }
+   * 
+   */
+  public TrustServiceProviderListType getTrustServiceProviderList() {
+    return trustServiceProviderList;
+  }
 
-    /**
-     * Sets the value of the trustServiceProviderList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TrustServiceProviderListType }
-     *     
-     */
-    public void setTrustServiceProviderList(TrustServiceProviderListType value) {
-        this.trustServiceProviderList = value;
-    }
+  /**
+   * Sets the value of the trustServiceProviderList property.
+   * 
+   * @param value allowed object is {@link TrustServiceProviderListType }
+   * 
+   */
+  public void setTrustServiceProviderList(TrustServiceProviderListType value) {
+    this.trustServiceProviderList = value;
+  }
 
-    /**
-     * Gets the value of the signatureOK property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SignatureValidityType }
-     *     
-     */
-    public SignatureValidityType getSignatureOK() {
-        return signatureOK;
-    }
+  /**
+   * Gets the value of the signatureOK property.
+   * 
+   * @return possible object is {@link SignatureValidityType }
+   * 
+   */
+  public SignatureValidityType getSignatureOK() {
+    return signatureOK;
+  }
 
-    /**
-     * Sets the value of the signatureOK property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SignatureValidityType }
-     *     
-     */
-    public void setSignatureOK(SignatureValidityType value) {
-        this.signatureOK = value;
-    }
+  /**
+   * Sets the value of the signatureOK property.
+   * 
+   * @param value allowed object is {@link SignatureValidityType }
+   * 
+   */
+  public void setSignatureOK(SignatureValidityType value) {
+    this.signatureOK = value;
+  }
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+  /**
+   * Gets the value of the id property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getId() {
+    return id;
+  }
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+  /**
+   * Sets the value of the id property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setId(String value) {
+    this.id = value;
+  }
 
-    /**
-     * Gets the value of the tslTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getTSLTag() {
-        return tslTag;
-    }
+  /**
+   * Gets the value of the tslTag property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getTSLTag() {
+    return tslTag;
+  }
 
-    /**
-     * Sets the value of the tslTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTSLTag(String value) {
-        this.tslTag = value;
-    }
+  /**
+   * Sets the value of the tslTag property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setTSLTag(String value) {
+    this.tslTag = value;
+  }
 
 }

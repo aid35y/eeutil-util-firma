@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.nativos.model.validarcertificado;
@@ -22,9 +20,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -70,230 +70,200 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "peticion",
-    "versionMsg",
-    "parametros"
-})
+@XmlType(name = "", propOrder = {"peticion", "versionMsg", "parametros"})
 @XmlRootElement(name = "mensajeEntrada")
 public class MensajeEntrada {
 
+  @XmlElement(required = true)
+  protected String peticion;
+  @XmlElement(required = true)
+  protected String versionMsg;
+  @XmlElement(required = true)
+  protected MensajeEntrada.Parametros parametros;
+
+  /**
+   * Gets the value of the peticion property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getPeticion() {
+    return peticion;
+  }
+
+  /**
+   * Sets the value of the peticion property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setPeticion(String value) {
+    this.peticion = value;
+  }
+
+  /**
+   * Gets the value of the versionMsg property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getVersionMsg() {
+    return versionMsg;
+  }
+
+  /**
+   * Sets the value of the versionMsg property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setVersionMsg(String value) {
+    this.versionMsg = value;
+  }
+
+  /**
+   * Gets the value of the parametros property.
+   * 
+   * @return possible object is {@link MensajeEntrada.Parametros }
+   * 
+   */
+  public MensajeEntrada.Parametros getParametros() {
+    return parametros;
+  }
+
+  /**
+   * Sets the value of the parametros property.
+   * 
+   * @param value allowed object is {@link MensajeEntrada.Parametros }
+   * 
+   */
+  public void setParametros(MensajeEntrada.Parametros value) {
+    this.parametros = value;
+  }
+
+
+  /**
+   * <p>
+   * Java class for anonymous complex type.
+   * 
+   * <p>
+   * The following schema fragment specifies the expected content contained within this class.
+   * 
+   * <pre>
+   * &lt;complexType>
+   *   &lt;complexContent>
+   *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+   *       &lt;all>
+   *         &lt;element name="certificado" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+   *         &lt;element name="idAplicacion" type="{http://www.w3.org/2001/XMLSchema}string"/>
+   *         &lt;element name="modoValidacion" minOccurs="0">
+   *           &lt;simpleType>
+   *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+   *               &lt;minInclusive value="0"/>
+   *               &lt;maxInclusive value="2"/>
+   *             &lt;/restriction>
+   *           &lt;/simpleType>
+   *         &lt;/element>
+   *         &lt;element name="obtenerInfo" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+   *       &lt;/all>
+   *     &lt;/restriction>
+   *   &lt;/complexContent>
+   * &lt;/complexType>
+   * </pre>
+   * 
+   * 
+   */
+  @XmlAccessorType(XmlAccessType.FIELD)
+  @XmlType(name = "", propOrder = {
+
+  })
+  public static class Parametros {
+
     @XmlElement(required = true)
-    protected String peticion;
+    protected String certificado;
     @XmlElement(required = true)
-    protected String versionMsg;
-    @XmlElement(required = true)
-    protected MensajeEntrada.Parametros parametros;
+    protected String idAplicacion;
+    protected Integer modoValidacion;
+    protected Boolean obtenerInfo;
 
     /**
-     * Gets the value of the peticion property.
+     * Gets the value of the certificado property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is byte[]
      */
-    public String getPeticion() {
-        return peticion;
+    public String getCertificado() {
+      return certificado;
     }
 
     /**
-     * Sets the value of the peticion property.
+     * Sets the value of the certificado property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     * @param value allowed object is byte[]
      */
-    public void setPeticion(String value) {
-        this.peticion = value;
+    public void setCertificado(String value) {
+      this.certificado = value;
     }
 
     /**
-     * Gets the value of the versionMsg property.
+     * Gets the value of the idAplicacion property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getVersionMsg() {
-        return versionMsg;
+    public String getIdAplicacion() {
+      return idAplicacion;
     }
 
     /**
-     * Sets the value of the versionMsg property.
+     * Sets the value of the idAplicacion property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     * @param value allowed object is {@link String }
+     * 
      */
-    public void setVersionMsg(String value) {
-        this.versionMsg = value;
+    public void setIdAplicacion(String value) {
+      this.idAplicacion = value;
     }
 
     /**
-     * Gets the value of the parametros property.
+     * Gets the value of the modoValidacion property.
      * 
-     * @return
-     *     possible object is
-     *     {@link MensajeEntrada.Parametros }
-     *     
+     * @return possible object is {@link Integer }
+     * 
      */
-    public MensajeEntrada.Parametros getParametros() {
-        return parametros;
+    public Integer getModoValidacion() {
+      return modoValidacion;
     }
 
     /**
-     * Sets the value of the parametros property.
+     * Sets the value of the modoValidacion property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link MensajeEntrada.Parametros }
-     *     
+     * @param value allowed object is {@link Integer }
+     * 
      */
-    public void setParametros(MensajeEntrada.Parametros value) {
-        this.parametros = value;
+    public void setModoValidacion(Integer value) {
+      this.modoValidacion = value;
     }
-
 
     /**
-     * <p>Java class for anonymous complex type.
+     * Gets the value of the obtenerInfo property.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;all>
-     *         &lt;element name="certificado" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
-     *         &lt;element name="idAplicacion" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="modoValidacion" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
-     *               &lt;minInclusive value="0"/>
-     *               &lt;maxInclusive value="2"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="obtenerInfo" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
-     *       &lt;/all>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
+     * @return possible object is {@link Boolean }
      * 
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-
-    })
-    public static class Parametros {
-
-        @XmlElement(required = true)
-        protected String certificado;
-        @XmlElement(required = true)
-        protected String idAplicacion;
-        protected Integer modoValidacion;
-        protected Boolean obtenerInfo;
-
-        /**
-         * Gets the value of the certificado property.
-         * 
-         * @return
-         *     possible object is
-         *     byte[]
-         */
-        public String getCertificado() {
-            return certificado;
-        }
-
-        /**
-         * Sets the value of the certificado property.
-         * 
-         * @param value
-         *     allowed object is
-         *     byte[]
-         */
-        public void setCertificado(String value) {
-            this.certificado = value;
-        }
-
-        /**
-         * Gets the value of the idAplicacion property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getIdAplicacion() {
-            return idAplicacion;
-        }
-
-        /**
-         * Sets the value of the idAplicacion property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setIdAplicacion(String value) {
-            this.idAplicacion = value;
-        }
-
-        /**
-         * Gets the value of the modoValidacion property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
-         */
-        public Integer getModoValidacion() {
-            return modoValidacion;
-        }
-
-        /**
-         * Sets the value of the modoValidacion property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
-         */
-        public void setModoValidacion(Integer value) {
-            this.modoValidacion = value;
-        }
-
-        /**
-         * Gets the value of the obtenerInfo property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
-         */
-        public Boolean isObtenerInfo() {
-            return obtenerInfo;
-        }
-
-        /**
-         * Sets the value of the obtenerInfo property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
-         */
-        public void setObtenerInfo(Boolean value) {
-            this.obtenerInfo = value;
-        }
-
+    public Boolean isObtenerInfo() {
+      return obtenerInfo;
     }
+
+    /**
+     * Sets the value of the obtenerInfo property.
+     * 
+     * @param value allowed object is {@link Boolean }
+     * 
+     */
+    public void setObtenerInfo(Boolean value) {
+      this.obtenerInfo = value;
+    }
+
+  }
 
 }

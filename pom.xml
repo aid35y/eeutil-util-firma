@@ -1,171 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.gob.aapp.eeutil</groupId>
 	<artifactId>wrapper-eeutil-mvn-base</artifactId>
-	<version>4.1-CARM.1-SNAPSHOT</version>
+	<version>4.2.0-CARM.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-    <name>eeutil-util-firma</name>
+	<name>eeutil-util-firma</name>
 
 	<scm>
-	    <connection>scm:git:https://github.com/josefsabater/eeutil-util-firma.git</connection>
+		<connection>scm:git:https://github.com/josefsabater/eeutil-util-firma.git</connection>
 		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-util-firma.git[fetch=]https://github.com/josefsabater/eeutil-util-firma.git</developerConnection>
 		<url>https://github.com/josefsabater/eeutil-util-firma.git</url>
 		<tag>HEAD</tag>
 	</scm>
 
 	<licenses>
-	  <license>
-		<name>EUPL</name>
-		<url>https://joinup.ec.europa.eu/sites/default/files/eupl1.1.-licence-es_0.pdf</url>
-	  </license>
+		<license>
+			<name>EUPL</name>
+			<url>https://joinup.ec.europa.eu/sites/default/files/eupl1.1.-licence-es_0.pdf</url>
+		</license>
 	</licenses>
 
 
-	<properties>	
-	  <version.java>1.8</version.java>
-	  <codificacion>UTF-8</codificacion>
-	</properties>	
-	
+	<properties>
+		<version.java>1.8</version.java>
+		<codificacion>UTF-8</codificacion>
+	</properties>
+
 	<repositories>
-	    <repository>
-	        <releases>
-	            <enabled>true</enabled>
-	            <updatePolicy>never</updatePolicy>
-	        </releases>
-	        <snapshots>
-	            <enabled>true</enabled>
-	            <updatePolicy>never</updatePolicy>
-	        </snapshots>
-	        <id>maven-carm-es-eeutil-util-firma-remote-repos</id>
-	        <name>repo-carm-es-eeutil-util-firma-remote-repos</name>
-	        <url>https://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo</url>
-	    </repository>
-	    <repository>
-	        <snapshots>
-	            <enabled>false</enabled>
-	        </snapshots>
-	        <id>central</id>
-	        <name>Central Repository</name>
-	        <url>https://repo.maven.apache.org/maven2</url>
-	    </repository>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+			<id>maven-carm-es-eeutil-util-firma-remote-repos</id>
+			<name>repo-carm-es-eeutil-util-firma-remote-repos</name>
+			<url>https://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo</url>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
 	</repositories>
 
-        <build>
-            <pluginManagement>
-              <plugins>
-                 <!-- Formateo de código fuente -->	      
-                 <plugin>
-                    <groupId>net.revelc.code.formatter</groupId>
-                    <artifactId>formatter-maven-plugin</artifactId>
-                    <version>2.8.1</version>
-                    <configuration>
-                       <configFile>${maven.multiModuleProjectDirectory}/.mvn/eclipse-java-google-style.xml</configFile>
-                       <encoding>UTF-8</encoding>
-                       <lineEnding>AUTO</lineEnding>
-                       <directories>
-                          <directory>${basedir}/src/main/java</directory>
-                          <directory>${basedir}/src/main/resources</directory>
-                          <directory>${basedir}/src/test/java</directory>
-                          <directory>${basedir}/src/test/resources</directory>
-                       </directories>
-                       <excludes>
-                          <exclude>**/*.html</exclude>
-                          <exclude>**/*.*css</exclude> 
-                          <exclude>**/*.wsdl</exclude> 
-                          <exclude>**/*.xml</exclude> 
-                          <exclude>**/*.xsd</exclude> 
-                       </excludes>
-                    </configuration>
-                 </plugin>
-                 <!-- Añadir git-hook en el precomit para formatear automáticamente el código fuente -->
-                 <plugin>
-                    <groupId>io.github.phillipuniverse</groupId>
-                    <artifactId>githook-maven-plugin</artifactId>
-                    <version>1.0.4</version>
-                    <configuration>
-                       <hooks>
-                          <pre-commit>mvn net.revelc.code.formatter:formatter-maven-plugin:format</pre-commit>
-                       </hooks>
-                    </configuration>
-                 </plugin>
-                 <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.1</version>
-                    <configuration>
-                       <source>${version.java}</source>
-                       <target>${version.java}</target>
-						<encoding>${codificacion}</encoding>
-                    </configuration>
-                 </plugin>
-                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.4</version>
-                    <configuration>
-                       <encoding>${codificacion}</encoding>
-                    </configuration>
-                 </plugin>
-                 <!-- This plugin's configuration is used to store Eclipse 
-                	  m2e settings only. It has no influence on the Maven build itself. -->
-            	 <plugin>
-                	<groupId>org.eclipse.m2e</groupId>
-                	<artifactId>lifecycle-mapping</artifactId>
-                	<version>1.0.0</version>
-                	<configuration>
-                    	<lifecycleMappingMetadata>
-                        	<pluginExecutions>
-                            	<pluginExecution>
-                                	<pluginExecutionFilter>
-                                    	<groupId>io.github.phillipuniverse</groupId>
-                                    	<artifactId>githook-maven-plugin</artifactId>
-                                    	<versionRange>[1.0.4,)</versionRange>
-                                    	<goals>
-                                        	<goal>install</goal>
-                                    	</goals>
-                                	</pluginExecutionFilter>
-                                	<action>
-                                    	<ignore />
-                                	</action>
-                            	</pluginExecution>
-                        	</pluginExecutions>
-                    	</lifecycleMappingMetadata>
-                	</configuration>
-            	 </plugin> 
-              </plugins>
-            </pluginManagement>
-            <plugins>
-              <!-- Por defecto, que formatee el código fuente -->
-              <plugin>
-                 <groupId>net.revelc.code.formatter</groupId>
-                 <artifactId>formatter-maven-plugin</artifactId>
-                 <executions>
-                    <execution>
-                      <goals>
-                         <goal>format</goal>
-                      </goals>
-                    </execution>
-                 </executions>
-              </plugin>
-              <!-- Por defecto, instalar los hooks de git en el cliente, cuando se invoque a maven -->
-              <plugin>
-                 <groupId>io.github.phillipuniverse</groupId>
-                 <artifactId>githook-maven-plugin</artifactId>
-                 <executions>
-                    <execution>
-                       <goals>
-                          <goal>install</goal>
-                       </goals>
-                    </execution>
-                 </executions>
-              </plugin>
-            </plugins>
-        </build>
-	
-        <modules>
-            <module>fuentes/eeutil-mvn-base</module>
-        </modules> 
-    
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Formateo de código fuente -->
+				<plugin>
+					<groupId>net.revelc.code.formatter</groupId>
+					<artifactId>formatter-maven-plugin</artifactId>
+					<version>2.8.1</version>
+					<configuration>
+						<configFile>/.mvn/eclipse-java-google-style.xml</configFile>
+						<encoding>UTF-8</encoding>
+						<argLine>-Dfile.encoding=UTF-8</argLine>
+						<lineEnding>LF</lineEnding>
+						<directories>
+							<directory>${basedir}</directory>
+						</directories>
+						<excludes>
+							<exclude>**/*.html</exclude>
+							<exclude>**/*.*css</exclude>
+							<exclude>**/*.wsdl</exclude>
+							<exclude>**/*.xml</exclude>
+							<exclude>**/*.xsd</exclude>
+						</excludes>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- Por defecto, que formatee el código fuente -->
+			<plugin>
+				<groupId>net.revelc.code.formatter</groupId>
+				<artifactId>formatter-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>fuentes/eeutil-mvn-base</module>
+	</modules>
+
 </project>

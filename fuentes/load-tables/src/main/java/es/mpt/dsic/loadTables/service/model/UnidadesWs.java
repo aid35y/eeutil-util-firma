@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package es.mpt.dsic.loadTables.service.model;
@@ -21,9 +19,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for UnidadesWs complex type.
+ * <p>
+ * Java class for UnidadesWs complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="UnidadesWs">
@@ -52,351 +52,288 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UnidadesWs", propOrder = {
-    "usuario",
-    "clave",
-    "formatoFichero",
-    "tipoConsulta",
-    "codigo",
-    "unidadesDependientes",
-    "nivelAdministracion",
-    "nivelJerarquico",
-    "estados",
-    "comunidad",
-    "provincia",
-    "fechaInicio",
-    "fechaFin"
-})
+@XmlType(name = "UnidadesWs",
+    propOrder = {"usuario", "clave", "formatoFichero", "tipoConsulta", "codigo",
+        "unidadesDependientes", "nivelAdministracion", "nivelJerarquico", "estados", "comunidad",
+        "provincia", "fechaInicio", "fechaFin"})
 public class UnidadesWs {
 
-    @XmlElement(required = true)
-    protected String usuario;
-    @XmlElement(required = true)
-    protected String clave;
-    @XmlElement(required = true)
-    protected FormatoFichero formatoFichero;
-    @XmlElement(required = true)
-    protected TipoConsultaUO tipoConsulta;
-    protected String codigo;
-    protected Boolean unidadesDependientes;
-    protected Integer nivelAdministracion;
-    protected Integer nivelJerarquico;
-    protected Estados estados;
-    protected String comunidad;
-    protected String provincia;
-    protected String fechaInicio;
-    protected String fechaFin;
+  @XmlElement(required = true)
+  protected String usuario;
+  @XmlElement(required = true)
+  protected String clave;
+  @XmlElement(required = true)
+  protected FormatoFichero formatoFichero;
+  @XmlElement(required = true)
+  protected TipoConsultaUO tipoConsulta;
+  protected String codigo;
+  protected Boolean unidadesDependientes;
+  protected Integer nivelAdministracion;
+  protected Integer nivelJerarquico;
+  protected Estados estados;
+  protected String comunidad;
+  protected String provincia;
+  protected String fechaInicio;
+  protected String fechaFin;
 
-    /**
-     * Gets the value of the usuario property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUsuario() {
-        return usuario;
-    }
+  /**
+   * Gets the value of the usuario property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getUsuario() {
+    return usuario;
+  }
 
-    /**
-     * Sets the value of the usuario property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUsuario(String value) {
-        this.usuario = value;
-    }
+  /**
+   * Sets the value of the usuario property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setUsuario(String value) {
+    this.usuario = value;
+  }
 
-    /**
-     * Gets the value of the clave property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getClave() {
-        return clave;
-    }
+  /**
+   * Gets the value of the clave property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getClave() {
+    return clave;
+  }
 
-    /**
-     * Sets the value of the clave property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setClave(String value) {
-        this.clave = value;
-    }
+  /**
+   * Sets the value of the clave property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setClave(String value) {
+    this.clave = value;
+  }
 
-    /**
-     * Gets the value of the formatoFichero property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FormatoFichero }
-     *     
-     */
-    public FormatoFichero getFormatoFichero() {
-        return formatoFichero;
-    }
+  /**
+   * Gets the value of the formatoFichero property.
+   * 
+   * @return possible object is {@link FormatoFichero }
+   * 
+   */
+  public FormatoFichero getFormatoFichero() {
+    return formatoFichero;
+  }
 
-    /**
-     * Sets the value of the formatoFichero property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FormatoFichero }
-     *     
-     */
-    public void setFormatoFichero(FormatoFichero value) {
-        this.formatoFichero = value;
-    }
+  /**
+   * Sets the value of the formatoFichero property.
+   * 
+   * @param value allowed object is {@link FormatoFichero }
+   * 
+   */
+  public void setFormatoFichero(FormatoFichero value) {
+    this.formatoFichero = value;
+  }
 
-    /**
-     * Gets the value of the tipoConsulta property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TipoConsultaUO }
-     *     
-     */
-    public TipoConsultaUO getTipoConsulta() {
-        return tipoConsulta;
-    }
+  /**
+   * Gets the value of the tipoConsulta property.
+   * 
+   * @return possible object is {@link TipoConsultaUO }
+   * 
+   */
+  public TipoConsultaUO getTipoConsulta() {
+    return tipoConsulta;
+  }
 
-    /**
-     * Sets the value of the tipoConsulta property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TipoConsultaUO }
-     *     
-     */
-    public void setTipoConsulta(TipoConsultaUO value) {
-        this.tipoConsulta = value;
-    }
+  /**
+   * Sets the value of the tipoConsulta property.
+   * 
+   * @param value allowed object is {@link TipoConsultaUO }
+   * 
+   */
+  public void setTipoConsulta(TipoConsultaUO value) {
+    this.tipoConsulta = value;
+  }
 
-    /**
-     * Gets the value of the codigo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCodigo() {
-        return codigo;
-    }
+  /**
+   * Gets the value of the codigo property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getCodigo() {
+    return codigo;
+  }
 
-    /**
-     * Sets the value of the codigo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCodigo(String value) {
-        this.codigo = value;
-    }
+  /**
+   * Sets the value of the codigo property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setCodigo(String value) {
+    this.codigo = value;
+  }
 
-    /**
-     * Gets the value of the unidadesDependientes property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isUnidadesDependientes() {
-        return unidadesDependientes;
-    }
+  /**
+   * Gets the value of the unidadesDependientes property.
+   * 
+   * @return possible object is {@link Boolean }
+   * 
+   */
+  public Boolean isUnidadesDependientes() {
+    return unidadesDependientes;
+  }
 
-    /**
-     * Sets the value of the unidadesDependientes property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setUnidadesDependientes(Boolean value) {
-        this.unidadesDependientes = value;
-    }
+  /**
+   * Sets the value of the unidadesDependientes property.
+   * 
+   * @param value allowed object is {@link Boolean }
+   * 
+   */
+  public void setUnidadesDependientes(Boolean value) {
+    this.unidadesDependientes = value;
+  }
 
-    /**
-     * Gets the value of the nivelAdministracion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getNivelAdministracion() {
-        return nivelAdministracion;
-    }
+  /**
+   * Gets the value of the nivelAdministracion property.
+   * 
+   * @return possible object is {@link Integer }
+   * 
+   */
+  public Integer getNivelAdministracion() {
+    return nivelAdministracion;
+  }
 
-    /**
-     * Sets the value of the nivelAdministracion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setNivelAdministracion(Integer value) {
-        this.nivelAdministracion = value;
-    }
+  /**
+   * Sets the value of the nivelAdministracion property.
+   * 
+   * @param value allowed object is {@link Integer }
+   * 
+   */
+  public void setNivelAdministracion(Integer value) {
+    this.nivelAdministracion = value;
+  }
 
-    /**
-     * Gets the value of the nivelJerarquico property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getNivelJerarquico() {
-        return nivelJerarquico;
-    }
+  /**
+   * Gets the value of the nivelJerarquico property.
+   * 
+   * @return possible object is {@link Integer }
+   * 
+   */
+  public Integer getNivelJerarquico() {
+    return nivelJerarquico;
+  }
 
-    /**
-     * Sets the value of the nivelJerarquico property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setNivelJerarquico(Integer value) {
-        this.nivelJerarquico = value;
-    }
+  /**
+   * Sets the value of the nivelJerarquico property.
+   * 
+   * @param value allowed object is {@link Integer }
+   * 
+   */
+  public void setNivelJerarquico(Integer value) {
+    this.nivelJerarquico = value;
+  }
 
-    /**
-     * Gets the value of the estados property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Estados }
-     *     
-     */
-    public Estados getEstados() {
-        return estados;
-    }
+  /**
+   * Gets the value of the estados property.
+   * 
+   * @return possible object is {@link Estados }
+   * 
+   */
+  public Estados getEstados() {
+    return estados;
+  }
 
-    /**
-     * Sets the value of the estados property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Estados }
-     *     
-     */
-    public void setEstados(Estados value) {
-        this.estados = value;
-    }
+  /**
+   * Sets the value of the estados property.
+   * 
+   * @param value allowed object is {@link Estados }
+   * 
+   */
+  public void setEstados(Estados value) {
+    this.estados = value;
+  }
 
-    /**
-     * Gets the value of the comunidad property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getComunidad() {
-        return comunidad;
-    }
+  /**
+   * Gets the value of the comunidad property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getComunidad() {
+    return comunidad;
+  }
 
-    /**
-     * Sets the value of the comunidad property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setComunidad(String value) {
-        this.comunidad = value;
-    }
+  /**
+   * Sets the value of the comunidad property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setComunidad(String value) {
+    this.comunidad = value;
+  }
 
-    /**
-     * Gets the value of the provincia property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getProvincia() {
-        return provincia;
-    }
+  /**
+   * Gets the value of the provincia property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getProvincia() {
+    return provincia;
+  }
 
-    /**
-     * Sets the value of the provincia property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setProvincia(String value) {
-        this.provincia = value;
-    }
+  /**
+   * Sets the value of the provincia property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setProvincia(String value) {
+    this.provincia = value;
+  }
 
-    /**
-     * Gets the value of the fechaInicio property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFechaInicio() {
-        return fechaInicio;
-    }
+  /**
+   * Gets the value of the fechaInicio property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getFechaInicio() {
+    return fechaInicio;
+  }
 
-    /**
-     * Sets the value of the fechaInicio property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFechaInicio(String value) {
-        this.fechaInicio = value;
-    }
+  /**
+   * Sets the value of the fechaInicio property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setFechaInicio(String value) {
+    this.fechaInicio = value;
+  }
 
-    /**
-     * Gets the value of the fechaFin property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFechaFin() {
-        return fechaFin;
-    }
+  /**
+   * Gets the value of the fechaFin property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getFechaFin() {
+    return fechaFin;
+  }
 
-    /**
-     * Sets the value of the fechaFin property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFechaFin(String value) {
-        this.fechaFin = value;
-    }
+  /**
+   * Sets the value of the fechaFin property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setFechaFin(String value) {
+    this.fechaFin = value;
+  }
 
 }

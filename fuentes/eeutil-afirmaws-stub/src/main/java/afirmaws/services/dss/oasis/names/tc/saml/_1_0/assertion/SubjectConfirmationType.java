@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.oasis.names.tc.saml._1_0.assertion;
@@ -25,9 +23,11 @@ import afirmaws.services.dss.org.w3._2000._09.xmldsig.KeyInfoType;
 
 
 /**
- * <p>Java class for SubjectConfirmationType complex type.
+ * <p>
+ * Java class for SubjectConfirmationType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SubjectConfirmationType">
@@ -46,96 +46,84 @@ import afirmaws.services.dss.org.w3._2000._09.xmldsig.KeyInfoType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SubjectConfirmationType", propOrder = {
-    "confirmationMethod",
-    "subjectConfirmationData",
-    "keyInfo"
-})
+@XmlType(name = "SubjectConfirmationType",
+    propOrder = {"confirmationMethod", "subjectConfirmationData", "keyInfo"})
 public class SubjectConfirmationType {
 
-    @XmlElement(name = "ConfirmationMethod", required = true)
-    @XmlSchemaType(name = "anyURI")
-    protected List<String> confirmationMethod;
-    @XmlElement(name = "SubjectConfirmationData")
-    protected Object subjectConfirmationData;
-    @XmlElement(name = "KeyInfo", namespace = "http://www.w3.org/2000/09/xmldsig#")
-    protected KeyInfoType keyInfo;
+  @XmlElement(name = "ConfirmationMethod", required = true)
+  @XmlSchemaType(name = "anyURI")
+  protected List<String> confirmationMethod;
+  @XmlElement(name = "SubjectConfirmationData")
+  protected Object subjectConfirmationData;
+  @XmlElement(name = "KeyInfo", namespace = "http://www.w3.org/2000/09/xmldsig#")
+  protected KeyInfoType keyInfo;
 
-    /**
-     * Gets the value of the confirmationMethod property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the confirmationMethod property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getConfirmationMethod().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getConfirmationMethod() {
-        if (confirmationMethod == null) {
-            confirmationMethod = new ArrayList<String>();
-        }
-        return this.confirmationMethod;
+  /**
+   * Gets the value of the confirmationMethod property.
+   * 
+   * <p>
+   * This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the confirmationMethod property.
+   * 
+   * <p>
+   * For example, to add a new item, do as follows:
+   * 
+   * <pre>
+   * getConfirmationMethod().add(newItem);
+   * </pre>
+   * 
+   * 
+   * <p>
+   * Objects of the following type(s) are allowed in the list {@link String }
+   * 
+   * 
+   */
+  public List<String> getConfirmationMethod() {
+    if (confirmationMethod == null) {
+      confirmationMethod = new ArrayList<String>();
     }
+    return this.confirmationMethod;
+  }
 
-    /**
-     * Gets the value of the subjectConfirmationData property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Object }
-     *     
-     */
-    public Object getSubjectConfirmationData() {
-        return subjectConfirmationData;
-    }
+  /**
+   * Gets the value of the subjectConfirmationData property.
+   * 
+   * @return possible object is {@link Object }
+   * 
+   */
+  public Object getSubjectConfirmationData() {
+    return subjectConfirmationData;
+  }
 
-    /**
-     * Sets the value of the subjectConfirmationData property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Object }
-     *     
-     */
-    public void setSubjectConfirmationData(Object value) {
-        this.subjectConfirmationData = value;
-    }
+  /**
+   * Sets the value of the subjectConfirmationData property.
+   * 
+   * @param value allowed object is {@link Object }
+   * 
+   */
+  public void setSubjectConfirmationData(Object value) {
+    this.subjectConfirmationData = value;
+  }
 
-    /**
-     * Gets the value of the keyInfo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link KeyInfoType }
-     *     
-     */
-    public KeyInfoType getKeyInfo() {
-        return keyInfo;
-    }
+  /**
+   * Gets the value of the keyInfo property.
+   * 
+   * @return possible object is {@link KeyInfoType }
+   * 
+   */
+  public KeyInfoType getKeyInfo() {
+    return keyInfo;
+  }
 
-    /**
-     * Sets the value of the keyInfo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link KeyInfoType }
-     *     
-     */
-    public void setKeyInfo(KeyInfoType value) {
-        this.keyInfo = value;
-    }
+  /**
+   * Sets the value of the keyInfo property.
+   * 
+   * @param value allowed object is {@link KeyInfoType }
+   * 
+   */
+  public void setKeyInfo(KeyInfoType value) {
+    this.keyInfo = value;
+  }
 
 }

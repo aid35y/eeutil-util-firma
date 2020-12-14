@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.oasis.names.tc.saml._1_0.assertion;
@@ -26,9 +24,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for AuthenticationStatementType complex type.
+ * <p>
+ * Java class for AuthenticationStatementType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="AuthenticationStatementType">
@@ -48,124 +48,106 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AuthenticationStatementType", propOrder = {
-    "subjectLocality",
-    "authorityBinding"
-})
-public class AuthenticationStatementType
-    extends SubjectStatementAbstractType
-{
+@XmlType(name = "AuthenticationStatementType", propOrder = {"subjectLocality", "authorityBinding"})
+public class AuthenticationStatementType extends SubjectStatementAbstractType {
 
-    @XmlElement(name = "SubjectLocality")
-    protected SubjectLocalityType subjectLocality;
-    @XmlElement(name = "AuthorityBinding")
-    protected List<AuthorityBindingType> authorityBinding;
-    @XmlAttribute(name = "AuthenticationMethod", required = true)
-    @XmlSchemaType(name = "anyURI")
-    protected String authenticationMethod;
-    @XmlAttribute(name = "AuthenticationInstant", required = true)
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar authenticationInstant;
+  @XmlElement(name = "SubjectLocality")
+  protected SubjectLocalityType subjectLocality;
+  @XmlElement(name = "AuthorityBinding")
+  protected List<AuthorityBindingType> authorityBinding;
+  @XmlAttribute(name = "AuthenticationMethod", required = true)
+  @XmlSchemaType(name = "anyURI")
+  protected String authenticationMethod;
+  @XmlAttribute(name = "AuthenticationInstant", required = true)
+  @XmlSchemaType(name = "dateTime")
+  protected XMLGregorianCalendar authenticationInstant;
 
-    /**
-     * Gets the value of the subjectLocality property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SubjectLocalityType }
-     *     
-     */
-    public SubjectLocalityType getSubjectLocality() {
-        return subjectLocality;
+  /**
+   * Gets the value of the subjectLocality property.
+   * 
+   * @return possible object is {@link SubjectLocalityType }
+   * 
+   */
+  public SubjectLocalityType getSubjectLocality() {
+    return subjectLocality;
+  }
+
+  /**
+   * Sets the value of the subjectLocality property.
+   * 
+   * @param value allowed object is {@link SubjectLocalityType }
+   * 
+   */
+  public void setSubjectLocality(SubjectLocalityType value) {
+    this.subjectLocality = value;
+  }
+
+  /**
+   * Gets the value of the authorityBinding property.
+   * 
+   * <p>
+   * This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the authorityBinding property.
+   * 
+   * <p>
+   * For example, to add a new item, do as follows:
+   * 
+   * <pre>
+   * getAuthorityBinding().add(newItem);
+   * </pre>
+   * 
+   * 
+   * <p>
+   * Objects of the following type(s) are allowed in the list {@link AuthorityBindingType }
+   * 
+   * 
+   */
+  public List<AuthorityBindingType> getAuthorityBinding() {
+    if (authorityBinding == null) {
+      authorityBinding = new ArrayList<AuthorityBindingType>();
     }
+    return this.authorityBinding;
+  }
 
-    /**
-     * Sets the value of the subjectLocality property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SubjectLocalityType }
-     *     
-     */
-    public void setSubjectLocality(SubjectLocalityType value) {
-        this.subjectLocality = value;
-    }
+  /**
+   * Gets the value of the authenticationMethod property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getAuthenticationMethod() {
+    return authenticationMethod;
+  }
 
-    /**
-     * Gets the value of the authorityBinding property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the authorityBinding property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAuthorityBinding().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link AuthorityBindingType }
-     * 
-     * 
-     */
-    public List<AuthorityBindingType> getAuthorityBinding() {
-        if (authorityBinding == null) {
-            authorityBinding = new ArrayList<AuthorityBindingType>();
-        }
-        return this.authorityBinding;
-    }
+  /**
+   * Sets the value of the authenticationMethod property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setAuthenticationMethod(String value) {
+    this.authenticationMethod = value;
+  }
 
-    /**
-     * Gets the value of the authenticationMethod property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAuthenticationMethod() {
-        return authenticationMethod;
-    }
+  /**
+   * Gets the value of the authenticationInstant property.
+   * 
+   * @return possible object is {@link XMLGregorianCalendar }
+   * 
+   */
+  public XMLGregorianCalendar getAuthenticationInstant() {
+    return authenticationInstant;
+  }
 
-    /**
-     * Sets the value of the authenticationMethod property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAuthenticationMethod(String value) {
-        this.authenticationMethod = value;
-    }
-
-    /**
-     * Gets the value of the authenticationInstant property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getAuthenticationInstant() {
-        return authenticationInstant;
-    }
-
-    /**
-     * Sets the value of the authenticationInstant property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setAuthenticationInstant(XMLGregorianCalendar value) {
-        this.authenticationInstant = value;
-    }
+  /**
+   * Sets the value of the authenticationInstant property.
+   * 
+   * @param value allowed object is {@link XMLGregorianCalendar }
+   * 
+   */
+  public void setAuthenticationInstant(XMLGregorianCalendar value) {
+    this.authenticationInstant = value;
+  }
 
 }

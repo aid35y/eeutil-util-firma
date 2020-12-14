@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.org.etsi.uri._01903.v1_3;
@@ -31,9 +29,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for UnsignedSignaturePropertiesType complex type.
+ * <p>
+ * Java class for UnsignedSignaturePropertiesType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="UnsignedSignaturePropertiesType">
@@ -64,98 +64,111 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UnsignedSignaturePropertiesType", propOrder = {
-    "counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs"
-})
+@XmlType(name = "UnsignedSignaturePropertiesType",
+    propOrder = {"counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs"})
 public class UnsignedSignaturePropertiesType {
 
-    @XmlElementRefs({
-        @XmlElementRef(name = "SigAndRefsTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AttrAuthoritiesCertValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "RevocationValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AttributeCertificateRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SignatureTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CompleteRevocationRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AttributeRevocationValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AttributeRevocationRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CompleteCertificateRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CounterSignature", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CertificateValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "RefsOnlyTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ArchiveTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class, required = false)
-    })
-    @XmlAnyElement(lax = true)
-    protected List<Object> counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs;
-    @XmlAttribute(name = "Id")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
+  @XmlElementRefs({
+      @XmlElementRef(name = "SigAndRefsTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#",
+          type = JAXBElement.class, required = false),
+      @XmlElementRef(name = "AttrAuthoritiesCertValues",
+          namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class,
+          required = false),
+      @XmlElementRef(name = "RevocationValues", namespace = "http://uri.etsi.org/01903/v1.3.2#",
+          type = JAXBElement.class, required = false),
+      @XmlElementRef(name = "AttributeCertificateRefs",
+          namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class,
+          required = false),
+      @XmlElementRef(name = "SignatureTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#",
+          type = JAXBElement.class, required = false),
+      @XmlElementRef(name = "CompleteRevocationRefs",
+          namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class,
+          required = false),
+      @XmlElementRef(name = "AttributeRevocationValues",
+          namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class,
+          required = false),
+      @XmlElementRef(name = "AttributeRevocationRefs",
+          namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class,
+          required = false),
+      @XmlElementRef(name = "CompleteCertificateRefs",
+          namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class,
+          required = false),
+      @XmlElementRef(name = "CounterSignature", namespace = "http://uri.etsi.org/01903/v1.3.2#",
+          type = JAXBElement.class, required = false),
+      @XmlElementRef(name = "CertificateValues", namespace = "http://uri.etsi.org/01903/v1.3.2#",
+          type = JAXBElement.class, required = false),
+      @XmlElementRef(name = "RefsOnlyTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#",
+          type = JAXBElement.class, required = false),
+      @XmlElementRef(name = "ArchiveTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#",
+          type = JAXBElement.class, required = false)})
+  @XmlAnyElement(lax = true)
+  protected List<Object> counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs;
+  @XmlAttribute(name = "Id")
+  @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+  @XmlID
+  @XmlSchemaType(name = "ID")
+  protected String id;
 
-    /**
-     * Gets the value of the counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCounterSignatureOrSignatureTimeStampOrCompleteCertificateRefs().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Object }
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampType }{@code >}
-     * {@link JAXBElement }{@code <}{@link CertificateValuesType }{@code >}
-     * {@link JAXBElement }{@code <}{@link RevocationValuesType }{@code >}
-     * {@link JAXBElement }{@code <}{@link CompleteCertificateRefsType }{@code >}
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampType }{@code >}
-     * {@link JAXBElement }{@code <}{@link CompleteRevocationRefsType }{@code >}
-     * {@link JAXBElement }{@code <}{@link RevocationValuesType }{@code >}
-     * {@link JAXBElement }{@code <}{@link CompleteRevocationRefsType }{@code >}
-     * {@link JAXBElement }{@code <}{@link CompleteCertificateRefsType }{@code >}
-     * {@link JAXBElement }{@code <}{@link CounterSignatureType }{@code >}
-     * {@link JAXBElement }{@code <}{@link CertificateValuesType }{@code >}
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampType }{@code >}
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampType }{@code >}
-     * 
-     * 
-     */
-    public List<Object> getCounterSignatureOrSignatureTimeStampOrCompleteCertificateRefs() {
-        if (counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs == null) {
-            counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs = new ArrayList<Object>();
-        }
-        return this.counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs;
+  /**
+   * Gets the value of the counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs property.
+   * 
+   * <p>
+   * This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the
+   * counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs property.
+   * 
+   * <p>
+   * For example, to add a new item, do as follows:
+   * 
+   * <pre>
+   * getCounterSignatureOrSignatureTimeStampOrCompleteCertificateRefs().add(newItem);
+   * </pre>
+   * 
+   * 
+   * <p>
+   * Objects of the following type(s) are allowed in the list {@link Object } {@link JAXBElement
+   * }{@code <}{@link XAdESTimeStampType }{@code >} {@link JAXBElement
+   * }{@code <}{@link CertificateValuesType }{@code >} {@link JAXBElement
+   * }{@code <}{@link RevocationValuesType }{@code >} {@link JAXBElement
+   * }{@code <}{@link CompleteCertificateRefsType }{@code >} {@link JAXBElement
+   * }{@code <}{@link XAdESTimeStampType }{@code >} {@link JAXBElement
+   * }{@code <}{@link CompleteRevocationRefsType }{@code >} {@link JAXBElement
+   * }{@code <}{@link RevocationValuesType }{@code >} {@link JAXBElement
+   * }{@code <}{@link CompleteRevocationRefsType }{@code >} {@link JAXBElement
+   * }{@code <}{@link CompleteCertificateRefsType }{@code >} {@link JAXBElement
+   * }{@code <}{@link CounterSignatureType }{@code >} {@link JAXBElement
+   * }{@code <}{@link CertificateValuesType }{@code >} {@link JAXBElement
+   * }{@code <}{@link XAdESTimeStampType }{@code >} {@link JAXBElement
+   * }{@code <}{@link XAdESTimeStampType }{@code >}
+   * 
+   * 
+   */
+  public List<Object> getCounterSignatureOrSignatureTimeStampOrCompleteCertificateRefs() {
+    if (counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs == null) {
+      counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs = new ArrayList<Object>();
     }
+    return this.counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs;
+  }
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+  /**
+   * Gets the value of the id property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getId() {
+    return id;
+  }
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+  /**
+   * Sets the value of the id property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setId(String value) {
+    this.id = value;
+  }
 
 }

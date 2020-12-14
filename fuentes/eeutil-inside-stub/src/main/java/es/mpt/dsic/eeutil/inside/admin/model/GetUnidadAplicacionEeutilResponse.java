@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package es.mpt.dsic.eeutil.inside.admin.model;
@@ -23,9 +21,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para getUnidadAplicacionEeutilResponse complex type.
+ * <p>
+ * Clase Java para getUnidadAplicacionEeutilResponse complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="getUnidadAplicacionEeutilResponse">
@@ -42,41 +42,38 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getUnidadAplicacionEeutilResponse", propOrder = {
-    "unidadAplicacionEeutil"
-})
+@XmlType(name = "getUnidadAplicacionEeutilResponse", propOrder = {"unidadAplicacionEeutil"})
 public class GetUnidadAplicacionEeutilResponse {
 
-    @XmlElement(name = "UnidadAplicacionEeutil")
-    protected List<UnidadAplicacionEeutil> unidadAplicacionEeutil;
+  @XmlElement(name = "UnidadAplicacionEeutil")
+  protected List<UnidadAplicacionEeutil> unidadAplicacionEeutil;
 
-    /**
-     * Gets the value of the unidadAplicacionEeutil property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the unidadAplicacionEeutil property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getUnidadAplicacionEeutil().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link UnidadAplicacionEeutil }
-     * 
-     * 
-     */
-    public List<UnidadAplicacionEeutil> getUnidadAplicacionEeutil() {
-        if (unidadAplicacionEeutil == null) {
-            unidadAplicacionEeutil = new ArrayList<UnidadAplicacionEeutil>();
-        }
-        return this.unidadAplicacionEeutil;
+  /**
+   * Gets the value of the unidadAplicacionEeutil property.
+   * 
+   * <p>
+   * This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the unidadAplicacionEeutil property.
+   * 
+   * <p>
+   * For example, to add a new item, do as follows:
+   * 
+   * <pre>
+   * getUnidadAplicacionEeutil().add(newItem);
+   * </pre>
+   * 
+   * 
+   * <p>
+   * Objects of the following type(s) are allowed in the list {@link UnidadAplicacionEeutil }
+   * 
+   * 
+   */
+  public List<UnidadAplicacionEeutil> getUnidadAplicacionEeutil() {
+    if (unidadAplicacionEeutil == null) {
+      unidadAplicacionEeutil = new ArrayList<UnidadAplicacionEeutil>();
     }
+    return this.unidadAplicacionEeutil;
+  }
 
 }

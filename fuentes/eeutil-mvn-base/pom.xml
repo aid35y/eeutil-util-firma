@@ -16,7 +16,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.gob.aapp.eeutil</groupId>
 	<artifactId>eeutil-mvn-base</artifactId>
-	<version>4.1</version>	
+	<version>4.2.0-CARM.1-SNAPSHOT</version>	
 	<packaging>pom</packaging>
 	<description>Librerias del proyecto Eeutil</description>
 

@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package es.mpt.dsic.eeutil.inside.admin.model;
@@ -20,9 +18,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para Roles complex type.
+ * <p>
+ * Clase Java para Roles complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Roles">
@@ -45,135 +45,129 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Roles", namespace = "https://ssweb.seap.minhap.es/Inside/XSD/v1.0/aplicacion", propOrder = {
-    "altaExpediente",
-    "modificarExpediente",
-    "leerExpediente",
-    "altaDocumento",
-    "modificarDocumento",
-    "leerDocumento",
-    "administrarPermisos"
-})
+@XmlType(name = "Roles", namespace = "https://ssweb.seap.minhap.es/Inside/XSD/v1.0/aplicacion",
+    propOrder = {"altaExpediente", "modificarExpediente", "leerExpediente", "altaDocumento",
+        "modificarDocumento", "leerDocumento", "administrarPermisos"})
 public class Roles {
 
-    protected boolean altaExpediente;
-    protected boolean modificarExpediente;
-    protected boolean leerExpediente;
-    protected boolean altaDocumento;
-    protected boolean modificarDocumento;
-    protected boolean leerDocumento;
-    protected boolean administrarPermisos;
+  protected boolean altaExpediente;
+  protected boolean modificarExpediente;
+  protected boolean leerExpediente;
+  protected boolean altaDocumento;
+  protected boolean modificarDocumento;
+  protected boolean leerDocumento;
+  protected boolean administrarPermisos;
 
-    /**
-     * Obtiene el valor de la propiedad altaExpediente.
-     * 
-     */
-    public boolean isAltaExpediente() {
-        return altaExpediente;
-    }
+  /**
+   * Obtiene el valor de la propiedad altaExpediente.
+   * 
+   */
+  public boolean isAltaExpediente() {
+    return altaExpediente;
+  }
 
-    /**
-     * Define el valor de la propiedad altaExpediente.
-     * 
-     */
-    public void setAltaExpediente(boolean value) {
-        this.altaExpediente = value;
-    }
+  /**
+   * Define el valor de la propiedad altaExpediente.
+   * 
+   */
+  public void setAltaExpediente(boolean value) {
+    this.altaExpediente = value;
+  }
 
-    /**
-     * Obtiene el valor de la propiedad modificarExpediente.
-     * 
-     */
-    public boolean isModificarExpediente() {
-        return modificarExpediente;
-    }
+  /**
+   * Obtiene el valor de la propiedad modificarExpediente.
+   * 
+   */
+  public boolean isModificarExpediente() {
+    return modificarExpediente;
+  }
 
-    /**
-     * Define el valor de la propiedad modificarExpediente.
-     * 
-     */
-    public void setModificarExpediente(boolean value) {
-        this.modificarExpediente = value;
-    }
+  /**
+   * Define el valor de la propiedad modificarExpediente.
+   * 
+   */
+  public void setModificarExpediente(boolean value) {
+    this.modificarExpediente = value;
+  }
 
-    /**
-     * Obtiene el valor de la propiedad leerExpediente.
-     * 
-     */
-    public boolean isLeerExpediente() {
-        return leerExpediente;
-    }
+  /**
+   * Obtiene el valor de la propiedad leerExpediente.
+   * 
+   */
+  public boolean isLeerExpediente() {
+    return leerExpediente;
+  }
 
-    /**
-     * Define el valor de la propiedad leerExpediente.
-     * 
-     */
-    public void setLeerExpediente(boolean value) {
-        this.leerExpediente = value;
-    }
+  /**
+   * Define el valor de la propiedad leerExpediente.
+   * 
+   */
+  public void setLeerExpediente(boolean value) {
+    this.leerExpediente = value;
+  }
 
-    /**
-     * Obtiene el valor de la propiedad altaDocumento.
-     * 
-     */
-    public boolean isAltaDocumento() {
-        return altaDocumento;
-    }
+  /**
+   * Obtiene el valor de la propiedad altaDocumento.
+   * 
+   */
+  public boolean isAltaDocumento() {
+    return altaDocumento;
+  }
 
-    /**
-     * Define el valor de la propiedad altaDocumento.
-     * 
-     */
-    public void setAltaDocumento(boolean value) {
-        this.altaDocumento = value;
-    }
+  /**
+   * Define el valor de la propiedad altaDocumento.
+   * 
+   */
+  public void setAltaDocumento(boolean value) {
+    this.altaDocumento = value;
+  }
 
-    /**
-     * Obtiene el valor de la propiedad modificarDocumento.
-     * 
-     */
-    public boolean isModificarDocumento() {
-        return modificarDocumento;
-    }
+  /**
+   * Obtiene el valor de la propiedad modificarDocumento.
+   * 
+   */
+  public boolean isModificarDocumento() {
+    return modificarDocumento;
+  }
 
-    /**
-     * Define el valor de la propiedad modificarDocumento.
-     * 
-     */
-    public void setModificarDocumento(boolean value) {
-        this.modificarDocumento = value;
-    }
+  /**
+   * Define el valor de la propiedad modificarDocumento.
+   * 
+   */
+  public void setModificarDocumento(boolean value) {
+    this.modificarDocumento = value;
+  }
 
-    /**
-     * Obtiene el valor de la propiedad leerDocumento.
-     * 
-     */
-    public boolean isLeerDocumento() {
-        return leerDocumento;
-    }
+  /**
+   * Obtiene el valor de la propiedad leerDocumento.
+   * 
+   */
+  public boolean isLeerDocumento() {
+    return leerDocumento;
+  }
 
-    /**
-     * Define el valor de la propiedad leerDocumento.
-     * 
-     */
-    public void setLeerDocumento(boolean value) {
-        this.leerDocumento = value;
-    }
+  /**
+   * Define el valor de la propiedad leerDocumento.
+   * 
+   */
+  public void setLeerDocumento(boolean value) {
+    this.leerDocumento = value;
+  }
 
-    /**
-     * Obtiene el valor de la propiedad administrarPermisos.
-     * 
-     */
-    public boolean isAdministrarPermisos() {
-        return administrarPermisos;
-    }
+  /**
+   * Obtiene el valor de la propiedad administrarPermisos.
+   * 
+   */
+  public boolean isAdministrarPermisos() {
+    return administrarPermisos;
+  }
 
-    /**
-     * Define el valor de la propiedad administrarPermisos.
-     * 
-     */
-    public void setAdministrarPermisos(boolean value) {
-        this.administrarPermisos = value;
-    }
+  /**
+   * Define el valor de la propiedad administrarPermisos.
+   * 
+   */
+  public void setAdministrarPermisos(boolean value) {
+    this.administrarPermisos = value;
+  }
 
 }

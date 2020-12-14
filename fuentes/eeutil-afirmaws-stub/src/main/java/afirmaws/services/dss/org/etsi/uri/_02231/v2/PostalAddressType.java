@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.org.etsi.uri._02231.v2;
@@ -22,9 +20,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for PostalAddressType complex type.
+ * <p>
+ * Java class for PostalAddressType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="PostalAddressType">
@@ -46,170 +46,141 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PostalAddressType", propOrder = {
-    "streetAddress",
-    "locality",
-    "stateOrProvince",
-    "postalCode",
-    "countryName"
-})
+@XmlType(name = "PostalAddressType",
+    propOrder = {"streetAddress", "locality", "stateOrProvince", "postalCode", "countryName"})
 public class PostalAddressType {
 
-    @XmlElement(name = "StreetAddress", required = true)
-    protected String streetAddress;
-    @XmlElement(name = "Locality", required = true)
-    protected String locality;
-    @XmlElement(name = "StateOrProvince")
-    protected String stateOrProvince;
-    @XmlElement(name = "PostalCode", required = true)
-    protected String postalCode;
-    @XmlElement(name = "CountryName", required = true)
-    protected String countryName;
-    @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace", required = true)
-    protected String lang;
+  @XmlElement(name = "StreetAddress", required = true)
+  protected String streetAddress;
+  @XmlElement(name = "Locality", required = true)
+  protected String locality;
+  @XmlElement(name = "StateOrProvince")
+  protected String stateOrProvince;
+  @XmlElement(name = "PostalCode", required = true)
+  protected String postalCode;
+  @XmlElement(name = "CountryName", required = true)
+  protected String countryName;
+  @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace", required = true)
+  protected String lang;
 
-    /**
-     * Gets the value of the streetAddress property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getStreetAddress() {
-        return streetAddress;
-    }
+  /**
+   * Gets the value of the streetAddress property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getStreetAddress() {
+    return streetAddress;
+  }
 
-    /**
-     * Sets the value of the streetAddress property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setStreetAddress(String value) {
-        this.streetAddress = value;
-    }
+  /**
+   * Sets the value of the streetAddress property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setStreetAddress(String value) {
+    this.streetAddress = value;
+  }
 
-    /**
-     * Gets the value of the locality property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLocality() {
-        return locality;
-    }
+  /**
+   * Gets the value of the locality property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getLocality() {
+    return locality;
+  }
 
-    /**
-     * Sets the value of the locality property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLocality(String value) {
-        this.locality = value;
-    }
+  /**
+   * Sets the value of the locality property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setLocality(String value) {
+    this.locality = value;
+  }
 
-    /**
-     * Gets the value of the stateOrProvince property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getStateOrProvince() {
-        return stateOrProvince;
-    }
+  /**
+   * Gets the value of the stateOrProvince property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getStateOrProvince() {
+    return stateOrProvince;
+  }
 
-    /**
-     * Sets the value of the stateOrProvince property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setStateOrProvince(String value) {
-        this.stateOrProvince = value;
-    }
+  /**
+   * Sets the value of the stateOrProvince property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setStateOrProvince(String value) {
+    this.stateOrProvince = value;
+  }
 
-    /**
-     * Gets the value of the postalCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPostalCode() {
-        return postalCode;
-    }
+  /**
+   * Gets the value of the postalCode property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getPostalCode() {
+    return postalCode;
+  }
 
-    /**
-     * Sets the value of the postalCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPostalCode(String value) {
-        this.postalCode = value;
-    }
+  /**
+   * Sets the value of the postalCode property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setPostalCode(String value) {
+    this.postalCode = value;
+  }
 
-    /**
-     * Gets the value of the countryName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCountryName() {
-        return countryName;
-    }
+  /**
+   * Gets the value of the countryName property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getCountryName() {
+    return countryName;
+  }
 
-    /**
-     * Sets the value of the countryName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCountryName(String value) {
-        this.countryName = value;
-    }
+  /**
+   * Sets the value of the countryName property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setCountryName(String value) {
+    this.countryName = value;
+  }
 
-    /**
-     * Gets the value of the lang property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLang() {
-        return lang;
-    }
+  /**
+   * Gets the value of the lang property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getLang() {
+    return lang;
+  }
 
-    /**
-     * Sets the value of the lang property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLang(String value) {
-        this.lang = value;
-    }
+  /**
+   * Sets the value of the lang property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setLang(String value) {
+    this.lang = value;
+  }
 
 }

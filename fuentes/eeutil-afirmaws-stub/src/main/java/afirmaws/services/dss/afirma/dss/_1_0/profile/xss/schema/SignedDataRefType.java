@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.afirma.dss._1_0.profile.xss.schema;
@@ -22,9 +20,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SignedDataRefType complex type.
+ * <p>
+ * Java class for SignedDataRefType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SignedDataRefType">
@@ -45,146 +45,121 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignedDataRefType", propOrder = {
-    "xPath",
-    "referenceType",
-    "mimeType",
-    "encoding",
-    "hashAlgorithm"
-})
+@XmlType(name = "SignedDataRefType",
+    propOrder = {"xPath", "referenceType", "mimeType", "encoding", "hashAlgorithm"})
 public class SignedDataRefType {
 
-    @XmlElement(name = "XPath", required = true)
-    protected String xPath;
-    @XmlElement(name = "ReferenceType")
-    @XmlSchemaType(name = "anyURI")
-    protected String referenceType;
-    @XmlElement(name = "MimeType")
-    protected String mimeType;
-    @XmlElement(name = "Encoding")
-    protected String encoding;
-    @XmlElement(name = "HashAlgorithm")
-    @XmlSchemaType(name = "anyURI")
-    protected String hashAlgorithm;
+  @XmlElement(name = "XPath", required = true)
+  protected String xPath;
+  @XmlElement(name = "ReferenceType")
+  @XmlSchemaType(name = "anyURI")
+  protected String referenceType;
+  @XmlElement(name = "MimeType")
+  protected String mimeType;
+  @XmlElement(name = "Encoding")
+  protected String encoding;
+  @XmlElement(name = "HashAlgorithm")
+  @XmlSchemaType(name = "anyURI")
+  protected String hashAlgorithm;
 
-    /**
-     * Gets the value of the xPath property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getXPath() {
-        return xPath;
-    }
+  /**
+   * Gets the value of the xPath property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getXPath() {
+    return xPath;
+  }
 
-    /**
-     * Sets the value of the xPath property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setXPath(String value) {
-        this.xPath = value;
-    }
+  /**
+   * Sets the value of the xPath property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setXPath(String value) {
+    this.xPath = value;
+  }
 
-    /**
-     * Gets the value of the referenceType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getReferenceType() {
-        return referenceType;
-    }
+  /**
+   * Gets the value of the referenceType property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getReferenceType() {
+    return referenceType;
+  }
 
-    /**
-     * Sets the value of the referenceType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setReferenceType(String value) {
-        this.referenceType = value;
-    }
+  /**
+   * Sets the value of the referenceType property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setReferenceType(String value) {
+    this.referenceType = value;
+  }
 
-    /**
-     * Gets the value of the mimeType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMimeType() {
-        return mimeType;
-    }
+  /**
+   * Gets the value of the mimeType property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getMimeType() {
+    return mimeType;
+  }
 
-    /**
-     * Sets the value of the mimeType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMimeType(String value) {
-        this.mimeType = value;
-    }
+  /**
+   * Sets the value of the mimeType property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setMimeType(String value) {
+    this.mimeType = value;
+  }
 
-    /**
-     * Gets the value of the encoding property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getEncoding() {
-        return encoding;
-    }
+  /**
+   * Gets the value of the encoding property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getEncoding() {
+    return encoding;
+  }
 
-    /**
-     * Sets the value of the encoding property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setEncoding(String value) {
-        this.encoding = value;
-    }
+  /**
+   * Sets the value of the encoding property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setEncoding(String value) {
+    this.encoding = value;
+  }
 
-    /**
-     * Gets the value of the hashAlgorithm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getHashAlgorithm() {
-        return hashAlgorithm;
-    }
+  /**
+   * Gets the value of the hashAlgorithm property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getHashAlgorithm() {
+    return hashAlgorithm;
+  }
 
-    /**
-     * Sets the value of the hashAlgorithm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setHashAlgorithm(String value) {
-        this.hashAlgorithm = value;
-    }
+  /**
+   * Sets the value of the hashAlgorithm property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setHashAlgorithm(String value) {
+    this.hashAlgorithm = value;
+  }
 
 }

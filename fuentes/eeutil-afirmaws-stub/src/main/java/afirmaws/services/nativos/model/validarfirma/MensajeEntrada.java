@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.nativos.model.validarfirma;
@@ -22,9 +20,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -57,91 +57,75 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "peticion",
-    "versionMsg",
-    "parametros"
-})
+@XmlType(name = "", propOrder = {"peticion", "versionMsg", "parametros"})
 @XmlRootElement(name = "mensajeEntrada")
 public class MensajeEntrada {
 
-    @XmlElement(required = true)
-    protected String peticion;
-    @XmlElement(required = true)
-    protected String versionMsg;
-    @XmlElement(required = true)
-    protected Parametros parametros;
+  @XmlElement(required = true)
+  protected String peticion;
+  @XmlElement(required = true)
+  protected String versionMsg;
+  @XmlElement(required = true)
+  protected Parametros parametros;
 
-    /**
-     * Gets the value of the peticion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPeticion() {
-        return peticion;
-    }
+  /**
+   * Gets the value of the peticion property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getPeticion() {
+    return peticion;
+  }
 
-    /**
-     * Sets the value of the peticion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPeticion(String value) {
-        this.peticion = value;
-    }
+  /**
+   * Sets the value of the peticion property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setPeticion(String value) {
+    this.peticion = value;
+  }
 
-    /**
-     * Gets the value of the versionMsg property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getVersionMsg() {
-        return versionMsg;
-    }
+  /**
+   * Gets the value of the versionMsg property.
+   * 
+   * @return possible object is {@link String }
+   * 
+   */
+  public String getVersionMsg() {
+    return versionMsg;
+  }
 
-    /**
-     * Sets the value of the versionMsg property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setVersionMsg(String value) {
-        this.versionMsg = value;
-    }
+  /**
+   * Sets the value of the versionMsg property.
+   * 
+   * @param value allowed object is {@link String }
+   * 
+   */
+  public void setVersionMsg(String value) {
+    this.versionMsg = value;
+  }
 
-    /**
-     * Gets the value of the parametros property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Parametros }
-     *     
-     */
-    public Parametros getParametros() {
-        return parametros;
-    }
+  /**
+   * Gets the value of the parametros property.
+   * 
+   * @return possible object is {@link Parametros }
+   * 
+   */
+  public Parametros getParametros() {
+    return parametros;
+  }
 
-    /**
-     * Sets the value of the parametros property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Parametros }
-     *     
-     */
-    public void setParametros(Parametros value) {
-        this.parametros = value;
-    }
+  /**
+   * Sets the value of the parametros property.
+   * 
+   * @param value allowed object is {@link Parametros }
+   * 
+   */
+  public void setParametros(Parametros value) {
+    this.parametros = value;
+  }
 
 }

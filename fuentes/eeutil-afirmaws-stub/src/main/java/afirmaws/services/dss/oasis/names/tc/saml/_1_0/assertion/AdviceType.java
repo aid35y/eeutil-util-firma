@@ -1,15 +1,13 @@
-/* Copyright (C) 2012-13 MINHAP, Gobierno de España
-   This program is licensed and may be used, modified and redistributed under the terms
-   of the European Public License (EUPL), either version 1.1 or (at your
-   option) any later version as soon as they are approved by the European Commission.
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-   or implied. See the License for the specific language governing permissions and
-   more details.
-   You should have received a copy of the EUPL1.1 license
-   along with this program; if not, you may find it at
-   http://joinup.ec.europa.eu/software/page/eupl/licence-eupl */
+/*
+ * Copyright (C) 2012-13 MINHAP, Gobierno de España This program is licensed and may be used,
+ * modified and redistributed under the terms of the European Public License (EUPL), either version
+ * 1.1 or (at your option) any later version as soon as they are approved by the European
+ * Commission. Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language governing permissions and
+ * more details. You should have received a copy of the EUPL1.1 license along with this program; if
+ * not, you may find it at http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+ */
 
 
 package afirmaws.services.dss.oasis.names.tc.saml._1_0.assertion;
@@ -27,9 +25,11 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for AdviceType complex type.
+ * <p>
+ * Java class for AdviceType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="AdviceType">
@@ -48,48 +48,46 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AdviceType", propOrder = {
-    "assertionIDReferenceOrAssertionOrAny"
-})
+@XmlType(name = "AdviceType", propOrder = {"assertionIDReferenceOrAssertionOrAny"})
 public class AdviceType {
 
-    @XmlElementRefs({
-        @XmlElementRef(name = "Assertion", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AssertionIDReference", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class, required = false)
-    })
-    @XmlAnyElement(lax = true)
-    protected List<Object> assertionIDReferenceOrAssertionOrAny;
+  @XmlElementRefs({
+      @XmlElementRef(name = "Assertion", namespace = "urn:oasis:names:tc:SAML:1.0:assertion",
+          type = JAXBElement.class, required = false),
+      @XmlElementRef(name = "AssertionIDReference",
+          namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class,
+          required = false)})
+  @XmlAnyElement(lax = true)
+  protected List<Object> assertionIDReferenceOrAssertionOrAny;
 
-    /**
-     * Gets the value of the assertionIDReferenceOrAssertionOrAny property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the assertionIDReferenceOrAssertionOrAny property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAssertionIDReferenceOrAssertionOrAny().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Element }
-     * {@link Object }
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link AssertionType }{@code >}
-     * 
-     * 
-     */
-    public List<Object> getAssertionIDReferenceOrAssertionOrAny() {
-        if (assertionIDReferenceOrAssertionOrAny == null) {
-            assertionIDReferenceOrAssertionOrAny = new ArrayList<Object>();
-        }
-        return this.assertionIDReferenceOrAssertionOrAny;
+  /**
+   * Gets the value of the assertionIDReferenceOrAssertionOrAny property.
+   * 
+   * <p>
+   * This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the assertionIDReferenceOrAssertionOrAny property.
+   * 
+   * <p>
+   * For example, to add a new item, do as follows:
+   * 
+   * <pre>
+   * getAssertionIDReferenceOrAssertionOrAny().add(newItem);
+   * </pre>
+   * 
+   * 
+   * <p>
+   * Objects of the following type(s) are allowed in the list {@link Element } {@link Object }
+   * {@link JAXBElement }{@code <}{@link String }{@code >} {@link JAXBElement
+   * }{@code <}{@link AssertionType }{@code >}
+   * 
+   * 
+   */
+  public List<Object> getAssertionIDReferenceOrAssertionOrAny() {
+    if (assertionIDReferenceOrAssertionOrAny == null) {
+      assertionIDReferenceOrAssertionOrAny = new ArrayList<Object>();
     }
+    return this.assertionIDReferenceOrAssertionOrAny;
+  }
 
 }
