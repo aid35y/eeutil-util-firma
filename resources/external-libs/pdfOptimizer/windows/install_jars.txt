@@ -1,1 +1,0 @@
-mvn install:install-file -Dfile=POLA.jar -DgroupId=com.pdfTools -DartifactId=pDFOptimizer-windows -Dversion=4.8 -Dpackaging=jar
