@@ -64,6 +64,8 @@ $ sudo docker run --name eeutil-util-firma-c -v <path_config>:/usr/local/tomcat/
 ### Fichero de configuraci贸n
 La ruta de donde se obtienen los ficheros de configuraci贸n, se establece como argumento del servidor Tomcat al arrancarlo, mediante la variable de entorno **JAVA_OPTS**. Estos par谩metros establecen rutas propias del contenedor donde se ejecuta el servidor y a las que **no** se tiene acceso desde el exterior. Por poder pas谩rle al contenedor los ficheros de configuraci贸n desde el exterior utilizamos la opci贸n -v, que permite mapear directorios entre un contenedor y el host donde se ejecuta.
 
+Adem醩, tamb韊n se ha establecido el directorio de configuraci髇 como ruta para obtener el fichero **truststore.jks**. Lo que significa que se debe a馻dir al directorio de los ficheros de configuraci髇 para que el servidor Tomcat lo pueda coger. 
+
 ### Logs
 Notes茅 que entre los par谩metros de entrada de despliegue del servidor, no se encuentra ninguno que indique la localizaci贸n del log. Esto se debe a que dicha localizaci贸n se encuentra definida en el fichero de configuraci贸n **log4j.properties**. Es por eso que, antes de ejecutar el contenedor, deber谩 modificar esta ruta para establecer una propia del contenedor:
 

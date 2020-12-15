@@ -14,11 +14,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>es.gob.aapp.eeutil</groupId>
 	<artifactId>eeutil-mvn-base</artifactId>
-	<version>4.2.0-CARM.1-SNAPSHOT</version>	
 	<packaging>pom</packaging>
 	<description>Librerias del proyecto Eeutil</description>
+	
+ 	<parent>
+		<groupId>es.gob.aapp.eeutil</groupId>
+         <artifactId>wrapper-eeutil-mvn-base</artifactId>
+		<version>4.2.0-CARM.1-SNAPSHOT</version>
+		<relativePath>../..</relativePath>
+	</parent>
 
 	<!-- scm>
 		<connection>scm:svn:svn://dev.map.es/repo/svn/InSide/trunk/Desarrollo/inside-mvn-base</connection>
@@ -463,18 +468,17 @@
 			</testResource>
 		</testResources>
 		<plugins>
-
-			<plugin>
-				<!-- Compilación usando Java 1.7 -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-					<encoding>ISO-8859-1</encoding>
-				</configuration>
-			</plugin>
+			<!-- Compilación usando Java 1.7 -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-compiler-plugin</artifactId> -->
+<!-- 				<version>2.3.2</version> -->
+<!-- 				<configuration> -->
+<!-- 					<source>1.7</source> -->
+<!-- 					<target>1.7</target> -->
+<!-- 					<encoding>ISO-8859-1</encoding> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
 			<!-- Codificación UTF-8 de recursos -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
