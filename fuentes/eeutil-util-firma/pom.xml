@@ -14,9 +14,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>eeutil-util-firma</artifactId>
-	<version>4.0.8</version>
 	<packaging>war</packaging>
-
 
 	<parent>
 		<groupId>es.gob.aapp.eeutil</groupId>
@@ -108,12 +106,12 @@
 		<dependency>
 			<groupId>es.gob.aapp.eeutil</groupId>
 			<artifactId>eeutil-pdf-conversion</artifactId>
-			<version>4.2</version>
+			<version>4.2.0-CARM.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>es.gob.aapp.eeutil</groupId>
 			<artifactId>eeutil-comunes</artifactId>
-			<version>4.2</version>
+			<version>4.2.0-CARM.1-SNAPSHOT</version>
 		</dependency>
 
 		<!-- pdfoptmizer pdftools -->

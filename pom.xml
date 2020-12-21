@@ -11,13 +11,6 @@
 
 	<name>eeutil-util-firma</name>
 
-	<scm>
-		<connection>scm:git:https://github.com/josefsabater/eeutil-util-firma.git</connection>
-		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-util-firma.git[fetch=]https://github.com/josefsabater/eeutil-util-firma.git</developerConnection>
-		<url>https://github.com/josefsabater/eeutil-util-firma.git</url>
-		<tag>HEAD</tag>
-	</scm>
-
 	<licenses>
 		<license>
 			<name>EUPL</name>
@@ -25,12 +18,18 @@
 		</license>
 	</licenses>
 
+	<scm>
+		<connection>scm:git:https://github.com/josefsabater/eeutil-shared.git</connection>
+		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-shared.git[fetch=]https://github.com/josefsabater/eeutil-shared.git</developerConnection>
+		<url>https://github.com/josefsabater/eeutil-shared.git</url>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<version.java>1.8</version.java>
 		<codificacion>UTF-8</codificacion>
 	</properties>
-
+	
 	<repositories>
 		<repository>
 			<releases>
@@ -41,9 +40,9 @@
 				<enabled>true</enabled>
 				<updatePolicy>never</updatePolicy>
 			</snapshots>
-			<id>maven-carm-es-eeutil-util-firma-remote-repos</id>
-			<name>repo-carm-es-eeutil-util-firma-remote-repos</name>
-			<url>https://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo</url>
+			<id>maven-carm-es-eeutil-shared-remote-repos</id>
+			<name>repo-carm-es-eeutil-shared-remote-repos</name>
+			<url>https://raw.githubusercontent.com/josefsabater/eeutil-shared/mvn-repo</url>
 		</repository>
 		<repository>
 			<snapshots>

@@ -15,7 +15,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>eeutil-mvn-base</artifactId>
+	<version>4.2.0-CARM.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	
 	<description>Librerias del proyecto Eeutil</description>
 	
  	<parent>
@@ -24,12 +26,6 @@
 		<version>4.2.0-CARM.1-SNAPSHOT</version>
 		<relativePath>../..</relativePath>
 	</parent>
-
-	<!-- scm>
-		<connection>scm:svn:svn://dev.map.es/repo/svn/InSide/trunk/Desarrollo/inside-mvn-base</connection>
-		<developerConnection>scm:svn:svn+ssh://{mpt.username}@dev.map.es/repo/svn/InSide/trunk/Desarrollo/inside-mvn-base</developerConnection>
-		<url>http://dev.map.es/trac/InSide/browser/trunk/Desarrollo/inside-mvn-base/</url>
-	</scm-->
 
 	<organization>
 		<name>Ministerio de Politica Territorial y Administración Pública</name>
@@ -53,35 +49,34 @@
 	</properties>
 	
 	<scm>
-	    <connection>scm:git:https://github.com/josefsabater/eeutil-util-firma.git</connection>
-		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-util-firma.git[fetch=]https://github.com/josefsabater/eeutil-util-firma.git</developerConnection>
-		<url>https://github.com/josefsabater/eeutil-util-firma.git</url>
+		<connection>scm:git:https://github.com/josefsabater/eeutil-shared.git</connection>
+		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-shared.git[fetch=]https://github.com/josefsabater/eeutil-shared.git</developerConnection>
+		<url>https://github.com/josefsabater/eeutil-shared.git</url>
 		<tag>HEAD</tag>
 	</scm>
 	
-	
 	<repositories>
-	    <repository>
-	        <releases>
-	            <enabled>true</enabled>
-	            <updatePolicy>never</updatePolicy>
-	        </releases>
-	        <snapshots>
-	            <enabled>true</enabled>
-	            <updatePolicy>never</updatePolicy>
-	        </snapshots>
-	        <id>maven-carm-es-eeutil-util-firma-remote-repos</id>
-	        <name>repo-carm-es-eeutil-util-firma-remote-repos</name>
-	        <url>https://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo</url>
-	    </repository>
-	    <repository>
-	        <snapshots>
-	            <enabled>false</enabled>
-	        </snapshots>
-	        <id>central</id>
-	        <name>Central Repository</name>
-	        <url>https://repo.maven.apache.org/maven2</url>
-	    </repository>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+			<id>maven-carm-es-eeutil-shared-remote-repos</id>
+			<name>repo-carm-es-eeutil-shared-remote-repos</name>
+			<url>https://raw.githubusercontent.com/josefsabater/eeutil-shared/mvn-repo</url>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
 	</repositories>
 
 	<dependencyManagement>
@@ -414,22 +409,7 @@
 	</distributionManagement>
 	
 	<modules>
-        <module>../eeutil-afirmaws-stub</module>
-<!--         <module>../eeutil-csvbroker-stub</module> -->
-<!--         <module>../eeutil-csvstoragews-stub</module> -->
-     	<module>../eeutil-inside-stub</module>
-     	<module>../eeutil-model</module>
-		<module>../eeutil-pdf-conversion</module>
-        <module>../eeutil-pdf-conversion-igae</module>        
-        <module>../eeutil-services</module>
-        <module>../eeutil-comunes</module>
-        <module>../eeutil-util</module>
-        <module>../load-tables</module>
-<!--         <module>../eeutil-firma</module> -->
-<!--         <module>../eeutil-misc</module> -->
-<!--         <module>../eeutil-oper-firma</module> -->
         <module>../eeutil-util-firma</module>
-<!--         <module>../eeutil-vis-docexp</module> -->
 	</modules>
 
 	<build>
