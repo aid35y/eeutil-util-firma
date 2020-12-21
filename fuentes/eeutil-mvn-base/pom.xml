@@ -47,37 +47,6 @@
 		<skip.tests>true</skip.tests>
 		<fork.mode.itegration.tests>never</fork.mode.itegration.tests>
 	</properties>
-	
-	<scm>
-		<connection>scm:git:https://github.com/josefsabater/eeutil-shared.git</connection>
-		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-shared.git[fetch=]https://github.com/josefsabater/eeutil-shared.git</developerConnection>
-		<url>https://github.com/josefsabater/eeutil-shared.git</url>
-		<tag>HEAD</tag>
-	</scm>
-	
-	<repositories>
-		<repository>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</snapshots>
-			<id>maven-carm-es-eeutil-shared-remote-repos</id>
-			<name>repo-carm-es-eeutil-shared-remote-repos</name>
-			<url>https://raw.githubusercontent.com/josefsabater/eeutil-shared/mvn-repo</url>
-		</repository>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>https://repo.maven.apache.org/maven2</url>
-		</repository>
-	</repositories>
 
 	<dependencyManagement>
 		<dependencies>

@@ -29,37 +29,6 @@
 
 	</properties>
 
-	<scm>
-		<connection>scm:git:https://github.com/josefsabater/eeutil-util-firma.git</connection>
-		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-util-firma.git[fetch=]https://github.com/josefsabater/eeutil-util-firma.git</developerConnection>
-		<url>https://github.com/josefsabater/eeutil-util-firma.git</url>
-		<tag>HEAD</tag>
-	</scm>
-
-	<repositories>
-		<repository>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</snapshots>
-			<id>maven-carm-es-eeutil-util-firma-remote-repos</id>
-			<name>repo-carm-es-eeutil-util-firma-remote-repos</name>
-			<url>https://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo</url>
-		</repository>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>https://repo.maven.apache.org/maven2</url>
-		</repository>
-	</repositories>
-
 
 	<dependencies>
 
