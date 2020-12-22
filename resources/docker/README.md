@@ -6,15 +6,15 @@ El único requisito que debe cumplir la máquina donde se pretenda ejecutar el p
 
 ## Generar imagen
 
-Para el montaje solo es necesario construir una imagen docker a partir del fichero **Dockerfile**. Para ello sitúese en la carpeta ``/docker`` del proyecto y ejecute el siguiente comando:
+Para el montaje solo es necesario construir una imagen docker a partir del fichero *Dockerfile*. Para ello sitúese en la carpeta ``/docker`` del proyecto y ejecute el siguiente comando:
 
 ```sh
 $ sudo docker build -t imagen-eeutil .
 ```
 
-El comando *build* crea una imagen Docker a partir de un Dockerfile y la opción -t se usa para poner nombre a la imagen. 
+El comando ``build`` crea una imagen Docker a partir de un *Dockerfile*. La opción ``-t`` se usa para poner nombre a la imagen. 
 
-Tras su ejecución se irán sucediendo una serie de pasos definidos en el Dockerfile que darán como resultado una imagen con un servidor tomcat y el war del proyecto, listo para ejecutarse.
+Tras su ejecución se irán sucediendo una serie de pasos definidos en el *Dockerfile* que darán como resultado una imagen con el war de la aplicación y un servidor tomcat, listo para ejecutarse.
 
 El Dockerfile se divide en 3 etapas:
 
@@ -60,18 +60,18 @@ $ sudo docker images
 
 Una vez hemos generado la imagen con todo lo necesario, hay que ejecutar un contenedor que despliegue la aplicación partiendo de dicha imagen. Para ello debemos ejecutar el siguiente comando, sustituyendo los siguientes parámetros:
 
-* ``<path_config>``: Ruta absoluta al directorio con los ficheros de configuración y al truststore.jks. Puede ser la ruta donde se encuentran en el código fuente **<path>/resources/config** (recuerda que la ruta debe ser absoluta) u cualquier otra. Es importante recordar que los ficheros de configuración que se encuentran en /resources/config son en realidad una **plantilla** para la configuración, no tienen valores reales de conexión ni configuración. Además, el fichero **truststore.jks** tendrá que ser añadido explícitamente, ya que no se encuentra entre los ficheros de configuración
-* ``<path_logs>``: Ruta absoluta al directorio donde se generarán los logs de la aplicación. Puede ser cualquiera de la máquina donde se va a ejecutar el contenedor.
+* ``<path_config>``: Ruta absoluta al directorio con los ficheros de configuración y al **truststore.jks**. Puede ser la ruta donde se encuentran en el proyecto ``<path>/resources/config`` *(recuerda que la ruta debe ser absoluta)* o cualquier otra. Es importante recordar que los ficheros de configuración que se encuentran en ``<path>/resources/config`` son en realidad una **plantilla** para la configuración, no tienen valores reales de conexión ni configuración. Además, el fichero **truststore.jks** tendrá que ser añadido explícitamente, ya que no se encuentra entre los ficheros de configuración
+* ``<path_logs>``: Ruta absoluta al directorio donde se generarán los logs de la aplicación. Puede ser cualquiera de la máquina donde se va a ejecutar el contenedor
 
 ```sh
 $ sudo docker run --name eeutil-util-firma-c -v <path_config>:/usr/local/tomcat/conf/eeutil -v <path_logs>:/usr/local/tomcat/logs -p 8080:8080 eeutil-util-firma-i
 ```
 
 Breve resumen sobre cada parámetro de la ejecución:
-* *--name eeutil-util-firma-c*: Nombre del contenedor 
-* *-v <path_config>:/usr/local/tomcat/conf/eeutil*: Mapeo del directorio de configuración del host en el contenedor
-* *-v <path_logs>:/usr/local/tomcat/logs*: Mapeo del directorio de logs del host en el contenedor
-* *-p 8080:8080*: Mapeo del puerto 8080 del contenedor en el mismo puerto del host
+* ``--name eeutil-util-firma-c``: Nombre del contenedor 
+* ``-v <path_config>:/usr/local/tomcat/conf/eeutil``: Mapeo del directorio de configuración del host en el contenedor
+* ``-v <path_logs>:/usr/local/tomcat/logs``: Mapeo del directorio de logs del host en el contenedor
+* ``-p 8080:8080``: Mapeo del puerto 8080 del contenedor en el mismo puerto del host. Esto permite que la aplicación desplegada en el puerto 8080 del contenedor sea accesible desde el puerto 8080 del host
 
 ### Fichero de configuración
 La ruta de donde se obtienen los ficheros de configuración, se establece como argumento del servidor Tomcat al arrancarlo, mediante la variable de entorno **JAVA_OPTS**. Estos parámetros establecen rutas propias del contenedor donde se ejecuta el servidor y a las que **no** se tiene acceso desde el exterior. Por poder pasárle al contenedor los ficheros de configuración desde el exterior utilizamos la opción -v, que permite mapear directorios entre un contenedor y el host donde se ejecuta.
